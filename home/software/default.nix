@@ -4,8 +4,8 @@
     ./gtk.nix
     ./sss.nix
     ./xdg.nix
-    ./swayidle.nix
     ./anyrun
+    ./wayland
   ];
 
   home.packages = with pkgs; [
@@ -28,7 +28,6 @@
     eww
 
     # idle managent daemon
-    swayidle
     sway-audio-idle-inhibit
 
     # screenlocker daemon

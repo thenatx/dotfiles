@@ -21,9 +21,10 @@ in {
 
       grub = {
         enable = true;
-        devices = ["/dev/sda"];
-        theme = "${catppuccin-grub-src}/src/catppuccin-mocha-grub-theme";
+        device = "nodev";
+        efiSupport = true;
         backgroundColor = "#8277E5";
+        theme = "${catppuccin-grub-src}/src/catppuccin-mocha-grub-theme";
       };
     };
 

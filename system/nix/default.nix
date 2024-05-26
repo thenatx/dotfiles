@@ -7,7 +7,7 @@
   nix = {
     enable = true;
     extraOptions = ''
-      extra-experimental-features = flakes
+      extra-experimental-features = nix-command flakes
       warn-dirty = false
     '';
 
