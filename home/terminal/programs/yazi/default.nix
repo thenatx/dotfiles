@@ -35,7 +35,7 @@
 
     file # File type detection
 
-    rg # File content searching
+    ripgrep # File content searching
 
     fzf # Quick file subtree navigation
 

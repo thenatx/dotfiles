@@ -26,10 +26,16 @@
     # '';
 
     shellAliases = {
-      cleanup = "sudo nix-collect-garbage --delete-older-than 1d";
-      rebuild = "sudo nixos-rebuild switch --flake ~/natland";
-      ls = "lsd";
-      cat = "bat --theme=Dracula --number --color=always --paging=never --tabs=2";
+      cleanup = "nix-collect-garbage --delete-older-than 1d";
+      rebuild = "nixos-rebuild switch --flake #nat";
+
+      tree = "eza --tree --icons --tree";
+      ls = "eza -h --git --icons --color=auto --group-directories-first -s extension";      
+      l = "eza -lF --time-style=long-iso --icons";
+      la = "eza -lah --tree";
+      cat = "bat --theme=base16 --number --color=always --paging=never --tabs=2";
+
+      # Shell envs
       rustenv = "nix develop ~/nixosflake#rust";
       webenv = "nix develop ~/nixosflake#web";
       pythonenv = "nix develop ~/nixosflake#python";
