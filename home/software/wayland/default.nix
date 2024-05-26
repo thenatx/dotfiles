@@ -2,5 +2,5 @@
   imports = [
     ./hyprland
     ./swayidle.nix
-  ]
+  ];
 }

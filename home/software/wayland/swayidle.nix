@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.swayidle = {
+  services.swayidle = {
     enable = true;
 
     events = [

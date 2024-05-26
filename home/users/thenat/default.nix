@@ -1,8 +1,8 @@
 {self, ...}: let
   home = "${self}/home";
   terminal = {
-    emulators = "${self}/terminal/emulators";
-    programs = "${self}/terminal/programs";
+    emulators = "${home}/terminal/emulators";
+    programs = "${home}/terminal/programs";
   };
   editors = "${home}/editors";
 in {
