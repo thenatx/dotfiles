@@ -15,6 +15,7 @@
       ];
 
       exec-once = [
+        "hypridle"
         "swww-daemon"
       ];
     
@@ -25,8 +26,8 @@
         gaps_in = 5;
         gaps_out = 10;
 
-        col.inactive_border = "rgb(10050100) rgb(150100150) 50deg";
-        col.active_border = "#101010";
+        "col.inactive_border" = "#101010";
+        "col.active_border" = "#DD33DD";
 
         layout = "dwindle";
         resize_corner = 1;
@@ -37,7 +38,7 @@
       };
 
       decoration = {
-        rounding = 4;
+        rounding = 10;
 
         active_opacity = 0.8;
         inactive_opacity = 0.6;
@@ -47,13 +48,14 @@
 
         
         blur = {
-          enable = true;
-          size = 5;
+          enabled = true;
+          size = 10;
+          pases = 20;
           new_optimizations = true;
         };
       };
 
-      inputs = {
+      input = {
         kb_layout = "us";
         sensitivity = 1.0;
       };
@@ -141,10 +143,10 @@
           "specialMove,0.43,1,0.80,-0.45"
         ];
         animation = [
-          "windows,1,1.5,inout"
-          "windowsMove,1,0.5,linearMove"
-          "workspace,1,1,slidefade 35%"
-          "specialWorkspace,1,1,specialMove"
+          "windows,1,2.5,inout"
+          "windowsMove,1,1.0,linearMove"
+          "workspaces,1,2.0,linearMove"
+          "specialWorkspace,1,5.0,specialMove"
         ];
     };
   };

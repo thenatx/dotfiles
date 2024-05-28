@@ -4,10 +4,9 @@
   programs.sss = {
     enable = true;
 
-    # General Config
     general = {
-      author = " Thenat";
-      fonts = "ComicShannsMono NF=12.0";
+      author = "  thenat  ";
+      fonts = "ComicShannsMono Nerd Font=14.0";
       radius = 14;
       save-format = "webp";
       shadow = true;

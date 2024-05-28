@@ -12,59 +12,25 @@
     # Browser
     brave
 
-    # Image viewer
+    # Image related (image viewer, wallpaper manager and screenshots)
     loupe
+    swww
+    grim
 
-    # Wayland utils
-    wayland-utils
-
-    # XDG utils
-    xdg-utils
-
-    # Keyring
-    gnome.gnome-keyring
-
-    # Bar for wayland
-    eww
-
-    # idle managent daemon
-    sway-audio-idle-inhibit
-
-    # screenlocker daemon
-    swaylock-effects
-
-    # Logout manager
-    wlogout
+    # trash CLI
+    trash-cli
+    
+    # Audio related
+    pamixer
+    pavucontrol
 
     # Notify daemon
     dunst
     libnotify
 
-    # Utilities
-    swww
-    grim
-    slurp
-
-    # Audio related
-    pamixer
-    pavucontrol
-
-    # clipboard manager
-    wl-clipboard
-
-    # trash CLI
-    trash-cli
-
-    # Color picker
-    hyprpicker
-
-    # Dev tools
-    git
-
     # command utils
+    brightnessctl
     neofetch
-    tree
-    zip
-    unzip
+    slurp
   ];
 }
