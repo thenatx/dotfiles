@@ -48,7 +48,6 @@
     # Audio related
     pamixer
     pavucontrol
-    playerctl
 
     # clipboard manager
     wl-clipboard
@@ -68,14 +67,4 @@
     zip
     unzip
   ];
-
-  programs = {
-    lsd = {
-      enable = true;
-    };
-
-    bat = {
-      enable = true;
-    };
-  };
 }

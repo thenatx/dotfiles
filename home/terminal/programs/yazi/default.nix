@@ -1,9 +1,12 @@
 {
   config,
+  inputs,
   pkgs,
   ...
 }: {
+  imports = [./theme.nix];
   programs.yazi = {
+    enable = true;
     enableBashIntegration = config.programs.bash.enable;
     enableZshIntegration = config.programs.zsh.enable;
 
@@ -21,6 +24,8 @@
         linemode = "permissions";
       };
     };
+
+    package = inputs.yazi.packages.x86_64-linux.default;
   };
 
   # Packages to enable full yazi features

@@ -22,15 +22,12 @@
       path = "${config.xdg.dataHome}/zsh_history";
     };
 
-    # initExtra = ''
-    # '';
-
     shellAliases = {
       cleanup = "nix-collect-garbage --delete-older-than 1d";
       rebuild = "nixos-rebuild switch --flake #nat";
 
       tree = "eza --tree --icons --tree";
-      ls = "eza -h --git --icons --color=auto --group-directories-first -s extension";      
+      ls = "eza -h --git --icons --color=auto --group-directories-first -s extension";
       l = "eza -lF --time-style=long-iso --icons";
       la = "eza -lah --tree";
       cat = "bat --theme=base16 --number --color=always --paging=never --tabs=2";

@@ -4,6 +4,9 @@
 
     shellIntegration = {
       enableZshIntegration = true;
+      enableBashIntegration = true;
     };
+
+    theme = "Catppuccin-Mocha";
   };
 }

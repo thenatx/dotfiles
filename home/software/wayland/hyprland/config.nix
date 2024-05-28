@@ -1,124 +1,91 @@
 {
-  config,
-  lib,
   ...
 }: {
-  wayland.windowManager.hyprland = {
-    settings = {
+  wayland.windowManager.hyprland.settings = {
       "$mainMod" = "SUPER";
+
+      "$terminal" = "kitty";
+      "$fileManager" = "kitty yazi";
+      "$appLauncher" = "anyrun";
 
       env = [
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
         "HYPRCURSOR_SIZE,24"
+        "QT_QPA_PLATFORM,wayland"
       ];
 
-      input = {
-        kb_layout = "us";
-        follow_mouse = 2;
-        sensitivity = 0;
-        force_no_accel = 1;
-        accel_profile = "flat";
-        touchpad = {
-          disable_while_typing = true;
-          natural_scroll = false;
-        };
-      };
-
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_fingers = 3;
-        workspace_swipe_use_r = true;
-      };
-      cursor = {
-        no_warps = true;
-      };
-      misc = {
-        disable_splash_rendering = true;
-        disable_hyprland_logo = true;
-        force_default_wallpaper = 0;
-      };
+      exec-once = [
+        "swww-daemon"
+      ];
+    
       general = {
-        monitor = [
-          "eDP-1, preferred, auto, 1.0"
-        ];
+        monitor = "eDP-1,1440x900@60.01,0x0,1";
+        border_size = 2;
+        no_border_on_floating = true;
         gaps_in = 5;
-        gaps_out = 5;
-        border_size = 1;
-        "col.active_border" = "rgb(150, 80 150)";
-        "col.inactive_border" = "rgb(100, 40 100);";
-        "no_border_on_floating" = false;
-        layout = "dwindle";
-      };
-      decoration = {
-        rounding = 1;
-        blur = {
-          enabled = true;
-          size = 10;
-          passes = 3;
-          new_optimizations = true;
-          ignore_opacity = true;
-          noise = "0.1";
-          contrast = "1.0";
-          brightness = "1.0";
-          xray = true;
-          vibrancy = "0.5";
-          vibrancy_darkness = "0.1";
-          popups = true;
-          popups_ignorealpha = "0.2";
-        };
-        fullscreen_opacity = 1;
-        drop_shadow = true;
-        shadow_ignore_window = true;
-        shadow_offset = "0 8";
-        shadow_range = 50;
-        shadow_render_power = 3;
-        "col.shadow" = "rgba(00000055)";
-        blurls = ["lockscreen" "waybar" "popups"];
-      };
-      animation = {
-        bezier = [
-          "fluent_decel, 0, 0.2, 0.4, 1"
-          "easeOutCirc, 0, 0.55, 0.45, 1"
-          "easeOutCubic, 0.33, 1, 0.68, 1"
-          "easeinoutsine, 0.37, 0, 0.63, 1"
-        ];
-        animation = [
-          "windowsIn, 1, 1.7, easeOutCubic, slide" # window open
-          "windowsOut, 1, 1.7, easeOutCubic, slide" # window close
-          "windowsMove, 1, 2.5, easeinoutsine, slide" # everything in between, moving, dragging, resizing
+        gaps_out = 10;
 
-          # fading
-          "fadeIn, 1, 3, easeOutCubic" # fade in (open) -> layers and windows
-          "fadeOut, 1, 3, easeOutCubic" # fade out (close) -> layers and windows
-          "fadeSwitch, 1, 5, easeOutCirc" # fade on changing activewindow and its opacity
-          "fadeShadow, 1, 5, easeOutCirc" # fade on changing activewindow for shadows
-          "fadeDim, 1, 6, fluent_decel" # the easing of the dimming of inactive windows
-          "border, 1, 2.7, easeOutCirc" # for animating the border's color switch speed
-          "workspaces, 1, 2, fluent_decel, slide" # styles: slide, slidevert, fade, slidefade, slidefadevert
-          "specialWorkspace, 1, 3, fluent_decel, slidevert"
-        ];
+        col.inactive_border = "rgb(10050100) rgb(150100150) 50deg";
+        col.active_border = "#101010";
+
+        layout = "dwindle";
+        resize_corner = 1;
       };
-      dwindle = {
-        no_gaps_when_only = false;
-        pseudotile = true;
-        preserve_split = true;
+
+      master = {
+        new_is_master = true;
       };
-      master = {new_is_master = true;};
+
+      decoration = {
+        rounding = 4;
+
+        active_opacity = 0.8;
+        inactive_opacity = 0.6;
+        fullscreen_opacity = 1.0;
+
+        drop_shadow = false;
+
+        
+        blur = {
+          enable = true;
+          size = 5;
+          new_optimizations = true;
+        };
+      };
+
+      inputs = {
+        kb_layout = "us";
+        sensitivity = 1.0;
+      };
+
+      misc = {
+        disable_hyprland_logo = false;
+        font_family = "ComicSans";
+      };
 
       bind = [
+        # Apps
         "$mainMod, Q, exec, $terminal"
-        "$mainMod, C, killactive,"
-        "$mainMod, M, exit,"
         "$mainMod, E, exec, $fileManager"
+        "$mainMod, M, exec, $appLauncher"
+
+        # Misc
+        "$mainMod SHIFT, E, exit"
+
+        # Layout
         "$mainMod, V, togglefloating,"
-        "$mainMod, R, exec, $menu"
-        "$mainMod, P, pseudo,"
         "$mainMod, J, togglesplit,"
+        "$mainMod, P, pseudo,"
+
+        # Windows
+        "$mainMod, W, killactive,"
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
         "$mainMod, up, movefocus, u"
         "$mainMod, down, movefocus, d"
+        "$mainMod, F, fullscreen"
 
+        # Workspaces
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
         "$mainMod, 3, workspace, 3"
@@ -147,6 +114,7 @@
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
 
+        # Special misc
         ", XF86AudioMute, exec, pamixer --toggle-mute"
         ", XF86AudioRaiseVolume, exec, pamixer --increase 5"
         ", XF86AudioLowerVolume, exec, pamixer -decrease 5"
@@ -161,32 +129,23 @@
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
       ];
-      windowrulev2 = [
-        "opacity 0.90 0.90,class:^(Brave-browser)$"
-        "opacity 0.90 0.90,class:^(brave-browser)$"
-        "opacity 0.90 0.90,class:^(firefox)$"
-        "opacity 0.80 0.80,class:^(Spotify)$"
-        "opacity 0.80 0.80,title:^(Spotify( Premium)?)$"
-        "opacity 0.80 0.80,title:^(Spotify( Free)?)$"
-        "opacity 0.80 0.80,class:^(VencordDesktop|Webcord|discord|Discord)"
 
-        "float,title:^(DevTools)$"
-        "float,class:^(file_progress)$"
-        "float,class:^(confirm)$"
-        "float,class:^(download)$"
-        "float,class:^(notification)$"
-        "float,class:^(error)$"
-        "float,class:^(confirmreset)$"
-        "float,title:^(Open File)$"
-        "float,title:^(branchdialog)$"
-        "float,title:^(Confirm to replace files)$"
-        "float,title:^(File Operation Progress)$"
+      animations = {
+        enabled = true;
+      };
 
-        "float, title:^(Picture-in-Picture)$"
-        "pin, title:^(Picture-in-Picture)$"
-
-        "dimaround, class:^(xdg-desktop-portal-gtk)$"
-      ];
+      animation = {
+        bezier = [
+          "inout,0.7,0.36,0.7,0.38"
+          "linearMove,0.45,0.45,.0.45,0.45"
+          "specialMove,0.43,1,0.80,-0.45"
+        ];
+        animation = [
+          "windows,1,1.5,inout"
+          "windowsMove,1,0.5,linearMove"
+          "workspace,1,1,slidefade 35%"
+          "specialWorkspace,1,1,specialMove"
+        ];
     };
   };
 }

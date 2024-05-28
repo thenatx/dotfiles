@@ -4,7 +4,7 @@
 
     events = [
       {
-        event = "resume";
+        event = "after-resume";
         command = "${pkgs.hyprland}/bin/hyprctl dispatch dpms on eDP-1";
       }
       {

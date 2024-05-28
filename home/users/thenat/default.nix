@@ -3,6 +3,7 @@
   terminal = {
     emulators = "${home}/terminal/emulators";
     programs = "${home}/terminal/programs";
+    shell = "${home}/terminal/shell";
   };
   editors = "${home}/editors";
 in {
@@ -16,7 +17,7 @@ in {
     "${terminal.emulators}/alacritty"
 
     "${terminal.programs}"
-    "${terminal.programs}/yazi"
+    "${terminal.shell}"
 
     # Code editors
     "${editors}/zed"
