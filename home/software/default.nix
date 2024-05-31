@@ -19,7 +19,7 @@
 
     # trash CLI
     trash-cli
-    
+
     # Audio related
     pamixer
     pavucontrol

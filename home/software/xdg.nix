@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   # Utils xdg related
-  home.packages = with pkgs; [ xdg-utils ];
+  home.packages = with pkgs; [xdg-utils];
 
   xdg = {
     userDirs = {

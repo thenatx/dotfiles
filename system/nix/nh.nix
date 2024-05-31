@@ -1,5 +1,5 @@
 _: {
-  environment.variables.FLAKE = "/home/thenat/natland";
+  environment.variables.FLAKE = "/home/thenat/dotfiles";
 
   programs.nh = {
     enable = true;

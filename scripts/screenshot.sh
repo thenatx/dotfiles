@@ -1,24 +1,27 @@
 #! /run/current-system/sw/bin/bash
 
-if [ $# -ge 1 ] 
-then
-  if [[ $2 == "select" ]] 
-  then
+screenshot_path="$(echo $HOME)/Pictures/screenshots"
 
-    if [[ $3 == "--copy" ]] 
+if [ $# -ge 1 ]
+then
+  echo "let's go"
+  if [[ $1 == "select" ]]
+  then
+    echo "lGTM"
+    if [[ $2 == "--copy" ]]
     then
-      sss -o raw "$(slurp -c ffffff00 -d)" - | wl-copy -t image/png
-    else 
-      sss -o png "$(slurp -c ffffff00 -d)" "$(cmd "$HOME")/Pictures/screenshots/grim_screenshot_$(date "+%Y-%I-%M-%S").png"
+      sss -o raw --area "$(slurp -c ffffff00 -d)" | wl-copy -t image
+    else
+      sss --area "$(slurp -c ffffff00 -d)" -o "$screenshot_path/sss_$(date +%Y-%I-%M-%S).png"
     fi
 
   elif [[ $1 == "fullscreen" ]]
   then
     if [[ $2 == "--copy" ]]
     then
-      sss -o raw --screen --current | wl-copy -t image/png
+        sss -o raw --screen --current | wl-copy -t image
     else
-      sss -o png --screen --current "$(cmd "$HOME")/Pictures/screenshots/sss_screenshot_$(date "+%Y-%I-%M-%S").png"
+      sss --screen --current -o "$screenshot_path/sss_$(date +%Y-%I-%M-%S).png"
     fi
   else
     echo "incorrect arg"

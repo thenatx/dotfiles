@@ -1,4 +1,6 @@
-{...}: {
+{pkgs, ...}: {
+  home.packages = with pkgs; [hypridle];
+
   services.hypridle = {
     enable = true;
     settings = {
@@ -7,7 +9,7 @@
         before_sleep_cmd = "loginctl lock-session";
         after_sleep_cmd = "hyprctl dispatch dpms on";
       };
-      
+
       listener = [
         {
           timeout = 150;
@@ -17,7 +19,7 @@
 
         {
           timeout = 300;
-          on-timeout = "loginctl lock-session";
+          on-timeout = "hyprlock";
         }
 
         {

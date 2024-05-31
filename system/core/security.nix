@@ -1,7 +1,7 @@
 {...}: {
   security = {
     pam.services = {
-        hyprlock.fprintAuth = false;
+      hyprlock.fprintAuth = false;
     };
   };
 }

@@ -1,4 +1,8 @@
-{inputs, pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [./config.nix];
   wayland.windowManager.hyprland = {
     enable = true;
@@ -6,9 +10,9 @@
   };
 
   home.sessionVariables = {
-    NIXOS_WAYLAND_OZONE = 1;
+    NIXOS_OZONE_WL = 1;
   };
-  
+
   # utils packages for wayland (Hyprland)
   home.packages = with pkgs; [
     wayland-utils

@@ -17,7 +17,7 @@
   extraSpecialArgs = {inherit inputs self;};
 
   homeImports = {
-    "nat@thenat" = [
+    "thenat@nat" = [
       "${self}/home"
       ./thenat
     ];
@@ -25,8 +25,8 @@
 in {
   flake = {
     homeConfigurations = {
-      "nat@thenat" = homeManagerConfiguration {
-        modules = homeImports."nat@thenat";
+      "thenat@nat" = homeManagerConfiguration {
+        modules = homeImports."thenat@nat";
         inherit pkgs extraSpecialArgs;
       };
     };
