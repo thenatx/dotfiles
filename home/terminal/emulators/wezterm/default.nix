@@ -5,7 +5,7 @@
     extraConfig = ''
       local wezterm = require ("wezterm")
 
-      local font_name = "ComicMono"
+      local font_name = "ComicShannsMono Nerd Font Mono"
 
       return {
 

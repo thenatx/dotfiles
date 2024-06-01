@@ -4,7 +4,7 @@
     #    defaultEditor = true;
 
     settings = {
-      theme = "catppuccin_macchiato_transparent";
+      theme = "catppuccin_mocha_transparent";
 
       editor = {
         mouse = false;
@@ -47,16 +47,15 @@
     };
 
     themes = {
-      catppuccin_macchiato_transparent = {
-        inherits = "catppuccin_macchiato";
+      catppuccin_mocha_transparent = {
+        inherits = "catppuccin_mocha";
 
         "ui.background" = {};
       };
     };
 
     extraPackages = with pkgs; [
-      nil
-      nodePackages.bash-language-server
+      nil # Nix language server
     ];
   };
 }

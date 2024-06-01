@@ -20,12 +20,6 @@
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
-          name = "codeium";
-          publisher = "Codeium";
-          version = "1.7.34";
-          sha256 = "sha256-Wcy3XGlZM1HNaLmFeV1jAn+r6si9vJnUv3DK7HnrisA=";
-        }
-        {
           name = "vscord";
           publisher = "LeonardSSH";
           version = "5.1.18";

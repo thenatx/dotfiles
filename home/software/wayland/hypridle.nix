@@ -29,7 +29,7 @@
         }
 
         {
-          timeout = 800;
+          timeout = 1200;
           on-timeout = "systemctl suspend";
         }
       ];

@@ -17,9 +17,6 @@
     swww
     grim
 
-    # trash CLI
-    trash-cli
-
     # Audio related
     pamixer
     pavucontrol
@@ -30,6 +27,7 @@
 
     # command utils
     brightnessctl
+    trash-cli
     neofetch
     slurp
   ];

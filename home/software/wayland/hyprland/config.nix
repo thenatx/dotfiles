@@ -13,19 +13,20 @@
     ];
 
     exec-once = [
+      "dusnt"
       "hypridle"
       "swww-daemon"
     ];
 
     general = {
       monitor = "eDP-1,1440x900@60.01,0x0,1";
-      border_size = 2;
-      no_border_on_floating = true;
       gaps_in = 5;
       gaps_out = 10;
 
-      "col.inactive_border" = "#101010";
+      border_size = 2;
+      no_border_on_floating = true;
       "col.active_border" = "#DD33DD";
+      "col.inactive_border" = "#101010";
 
       layout = "dwindle";
       resize_corner = 1;
@@ -38,17 +39,18 @@
     decoration = {
       rounding = 10;
 
-      active_opacity = 0.6;
-      inactive_opacity = 0.6;
+      active_opacity = 0.95;
+      inactive_opacity = 0.85;
       fullscreen_opacity = 1.0;
 
       drop_shadow = false;
 
       blur = {
         enabled = true;
-        passes = 4;
-        size = 7;
+        size = 4;
+        passes = 2;
         new_optimizations = true;
+        ignore_opacity = true;
       };
     };
 
@@ -146,5 +148,10 @@
         "specialWorkspace,1,5.0,specialMove"
       ];
     };
+
+    windowrulev2 = [
+      "opacity 0.7,class:^kitty"
+      "opacity 0.8,class:^Discord"
+    ];
   };
 }

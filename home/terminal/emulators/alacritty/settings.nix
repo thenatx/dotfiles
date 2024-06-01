@@ -101,7 +101,7 @@
       size = 12.0;
 
       normal = {
-        family = "ComicShannsMono";
+        family = "ComicShannsMono Nerd Font Mono";
         style = "Regular";
       };
     };

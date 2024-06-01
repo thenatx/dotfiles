@@ -13,18 +13,17 @@
     config = {
       plugins = with inputs.anyrun.packages.${pkgs.system}; [
         applications
-        randr
-        rink
-        shell
-        symbols
         translate
+        symbols
+        kidex
+        shell
       ];
 
-      width.fraction = 0.3;
       y.absolute = 15;
-      hidePluginInfo = true;
-      closeOnClick = true;
       hideIcons = false;
+      closeOnClick = false;
+      width.fraction = 0.3;
+      hidePluginInfo = true;
     };
 
     extraCss = builtins.readFile (./. + "/anyrun-dark.css");
@@ -33,7 +32,7 @@
       Config(
         desktop_actions: false,
         max_entries: 10,
-        terminal: Some("alacritty"),
+        terminal: Some("wezterm"),
       )
     '';
   };

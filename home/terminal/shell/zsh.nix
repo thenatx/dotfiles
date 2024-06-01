@@ -29,7 +29,7 @@
       tree = "eza --tree --icons --tree";
       ls = "eza -h --git --icons --color=auto --group-directories-first -s extension";
       l = "eza -lF --time-style=long-iso --icons";
-      la = "eza -lah --tree";
+      la = "eza -lah";
       cat = "bat --theme=base16 --number --color=always --paging=never --tabs=2";
 
       # Shell envs

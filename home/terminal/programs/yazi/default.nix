@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  imports = [./theme.nix];
+  imports = [./theme.nix ./desktop.nix ];
   programs.yazi = {
     enable = true;
     enableBashIntegration = config.programs.bash.enable;
@@ -27,25 +27,17 @@
 
     package = inputs.yazi.packages.x86_64-linux.default;
   };
-
   # Packages to enable full yazi features
   home.packages = with pkgs; [
-    jq # JSON preview
-
-    fd # File searching
-
-    poppler # PDF preview
-
-    unar # Archive preview
-
-    file # File type detection
-
-    ripgrep # File content searching
-
-    fzf # Quick file subtree navigation
-
+    file              # File type detection (Required)
+    jq                # JSON preview
+    fd                # File searching
+    fzf               # Quick file subtree navigation
+    unar              # Archive preview
+    zoxide            # Historical directories navigation
+    ripgrep           # File content searching
     ffmpegthumbnailer # Video thumbnails
-
-    zoxide # Historical directories navigation
+    # poppler         # PDF preview
   ];
+
 }
