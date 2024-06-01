@@ -1,4 +1,6 @@
-{...}: {
+{ config, ... }: let 
+  cursor = config.home.pointerCursor; 
+in {
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
 
@@ -8,14 +10,18 @@
 
     env = [
       "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
-      "HYPRCURSOR_SIZE,24"
+      "HYPRCURSOR_SIZE,16"
       "QT_QPA_PLATFORM,wayland"
     ];
 
     exec-once = [
-      "dusnt"
-      "hypridle"
       "swww-daemon"
+      "hyprctl setcursor ${cursor.name} ${builtins.toString cursor.size}"
+      "hypridle"
+      "dunst"
+
+      "wl-paste --type text --watch cliphist store"
+      "wl-paste --type image --watch cliphist store"
     ];
 
     general = {

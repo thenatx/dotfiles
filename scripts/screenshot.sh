@@ -4,10 +4,8 @@ screenshot_path="$(echo $HOME)/Pictures/screenshots"
 
 if [ $# -ge 1 ]
 then
-  echo "let's go"
   if [[ $1 == "select" ]]
   then
-    echo "lGTM"
     if [[ $2 == "--copy" ]]
     then
       sss -o raw --area "$(slurp -c ffffff00 -d)" | wl-copy -t image
