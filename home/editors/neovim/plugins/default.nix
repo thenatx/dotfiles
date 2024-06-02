@@ -9,7 +9,7 @@
 	# User interface (UI)
 	noice = { enable = true; };
   lualine = import ./lualine.nix;
-  neo-tree = import ./neotree.nix;
+  neo-tree = import { enable = true; };
 	bufferline = { enable = true; };
 
 	# Misc
