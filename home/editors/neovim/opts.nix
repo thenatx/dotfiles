@@ -1,5 +1,10 @@
 {
-  numbers = true;
+  number = true;
+
+  autoindent = true;
+  smartindent = true;
+  shiftwidth = 2;
+  tabstop = 2;
 
   clipboard = {
     register = "nonamed";

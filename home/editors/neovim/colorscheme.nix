@@ -1,7 +1,7 @@
 {
   catppuccin = {
     enable = true;
-    setting = {
+    settings = {
       flavour = "mocha";
       # transparent_background = true;
     };

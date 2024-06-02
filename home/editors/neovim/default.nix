@@ -15,5 +15,6 @@
 
     opts = import ./opts.nix;
     plugins = import ./plugins;
-    colorschemes = import ./colorscheme.nix
+    colorschemes = import ./colorscheme.nix;
+  };
 }
