@@ -1,0 +1,3 @@
+{
+  lualine = import ./lualine.nix;
+}

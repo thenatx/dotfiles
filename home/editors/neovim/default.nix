@@ -1,7 +1,7 @@
-{inputs, ...}: {
+{inputs, ...}:
+{
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-    ./lualine.nix
   ];
 
   programs.nixvim = {
@@ -13,18 +13,7 @@
     viAlias = true;
     vimAlias = true;
 
-    opts = {
-      number = true;
-      shiftwidth = 2;
-      clipboard = "nonamedplus"
-    };
-
-    colorschemes.catppuccin = {
-      enable = true;
-      settings = {
-        flavour = "mocha";
-        transparent_background = true;
-      };
-    };
-  };
+    opts = import ./opts.nix;
+    plugins = import ./plugins;
+    colorschemes = import ./colorscheme.nix
 }
