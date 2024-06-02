@@ -7,12 +7,8 @@
     shell = pkgs.zsh;
 
     packages = with pkgs; [
-      alacritty
       kitty
       git
-
-      discord
-      betterdiscordctl
     ];
   };
 }

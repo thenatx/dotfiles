@@ -9,8 +9,11 @@
   ];
 
   home.packages = with pkgs; [
+		# Clients
+		webcord-vencord
+
     # Browser
-    brave
+		brave
 
     # Image related (image viewer, wallpaper manager and screenshots)
     loupe

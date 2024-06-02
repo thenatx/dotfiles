@@ -5,4 +5,10 @@
     ./security.nix
     ./networking.nix
   ];
+
+  services = {
+    openssh = {
+      enable = true;
+    };
+  };
 }

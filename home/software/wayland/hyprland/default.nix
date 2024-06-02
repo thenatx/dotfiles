@@ -17,7 +17,6 @@
   home.packages = with pkgs; [
     wayland-utils
     wl-clipboard
-    wlogout
     udiskie
 
     # bar
