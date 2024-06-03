@@ -5,11 +5,30 @@
 	# Editor utils
 	treesitter = { enable = true; };
 	nvim-autopairs = { enable = true; }; 
+	
+	# Language server (lsp)
+	lsp = { enable = true; };
+	lsp-format = { enable = true; };
 
 	# User interface (UI)
 	noice = { enable = true; };
+	notify = { 
+		enable = true;
+		backgroundColour = "#000000";
+		maxHeight = 10;
+		maxWidth = 20;
+		timeout = 3000;
+		topDown = false;
+	};
+
+  neo-tree = {
+		enable = true; 
+		window = {
+			position = "right";
+		};
+	};
+
   lualine = import ./lualine.nix;
-  neo-tree = { enable = true; };
 	bufferline = { enable = true; };
 
 	# Misc
