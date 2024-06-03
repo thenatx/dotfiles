@@ -53,8 +53,8 @@ in {
 
       blur = {
         enabled = true;
-        size = 4;
-        passes = 2;
+        size = 6;
+        passes = 4;
         new_optimizations = true;
         ignore_opacity = true;
       };
@@ -66,8 +66,9 @@ in {
     };
 
     misc = {
-      disable_hyprland_logo = false;
       font_family = "ComicSans";
+			force_default_wallpaper = 0;
+      disable_hyprland_logo = false;
     };
 
     bind = [
