@@ -3,13 +3,13 @@
   lazy = import ./lazy.nix;
 
 	# Editor utils
-	treesiter = { enable = true; };
+	treesitter = { enable = true; };
 	nvim-autopairs = { enable = true; }; 
 
 	# User interface (UI)
 	noice = { enable = true; };
   lualine = import ./lualine.nix;
-  neo-tree = import { enable = true; };
+  neo-tree = { enable = true; };
 	bufferline = { enable = true; };
 
 	# Misc
