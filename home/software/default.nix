@@ -30,6 +30,7 @@
 
     # command utils
     brightnessctl
+		xdg-utils
     trash-cli
     neofetch
     slurp
