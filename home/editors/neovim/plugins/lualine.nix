@@ -1,5 +1,6 @@
 {
   enable = true;
+	globalstatus = true;
 
   componentSeparators = {
 		left = "";
