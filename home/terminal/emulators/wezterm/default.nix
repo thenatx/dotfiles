@@ -29,7 +29,7 @@
 
         color_scheme = "Catppuccin Macchiato",
 
-        window_background_opacity = 0.7,
+        window_background_opacity = 0.8,
 
         warn_about_missing_glyphs = false,
         enable_scroll_bar = false,
