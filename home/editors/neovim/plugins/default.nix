@@ -15,8 +15,8 @@
 	notify = { 
 		enable = true;
 		backgroundColour = "#000000";
-		maxHeight = 10;
-		maxWidth = 20;
+		maxHeight = 15;
+		maxWidth = 40;
 		timeout = 3000;
 		topDown = false;
 	};
