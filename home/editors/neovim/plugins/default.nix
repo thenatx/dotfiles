@@ -10,12 +10,15 @@
 	lsp = { enable = true; };
 	lsp-format = { enable = true; };
 
+	# Completion
+	cmp = { enable = true; };
+
 	# User interface (UI)
 	noice = { enable = true; };
 	notify = { 
 		enable = true;
 		backgroundColour = "#000000";
-		maxHeight = 15;
+		maxHeight = 20;
 		maxWidth = 40;
 		timeout = 3000;
 		topDown = false;
