@@ -5,7 +5,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = ["git"];
-      theme = ""; # For use starship theme
+      theme = ""; 
     };
 
     autosuggestion.enable = true;
@@ -31,11 +31,6 @@
       l = "eza -lF --time-style=long-iso --icons";
       la = "eza -lah";
       cat = "bat --theme=base16 --number --color=always --paging=never --tabs=2";
-
-      # Shell envs
-      rustenv = "nix develop ~/nixosflake#rust";
-      webenv = "nix develop ~/nixosflake#web";
-      pythonenv = "nix develop ~/nixosflake#python";
     };
   };
 }
