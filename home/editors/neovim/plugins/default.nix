@@ -7,11 +7,23 @@
 	nvim-autopairs = { enable = true; }; 
 	
 	# Language server (lsp)
-	lsp = { enable = true; };
+	lsp = ./lsp.nix;
+
 	lsp-format = { enable = true; };
 
 	# Completion
-	cmp = { enable = true; };
+	cmp = {
+		enable = true;
+
+		settings = { 
+		  window = {
+				completion.border = "rounded";
+				documentation.border = "rounded";
+			};
+		};
+	};
+
+	cmp-cmdline = { enable = true; };
 
 	# User interface (UI)
 	noice = { enable = true; };
