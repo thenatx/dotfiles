@@ -45,7 +45,7 @@ in {
     decoration = {
       rounding = 10;
 
-      active_opacity = 0.95;
+      active_opacity = 0.85;
       inactive_opacity = 0.85;
       fullscreen_opacity = 1.0;
 
@@ -53,8 +53,8 @@ in {
 
       blur = {
         enabled = true;
-        size = 6;
-        passes = 4;
+        size = 7;
+        passes = 5;
         new_optimizations = true;
         ignore_opacity = true;
       };
