@@ -7,7 +7,7 @@
 	nvim-autopairs = { enable = true; }; 
 	
 	# Language server (lsp)
-	lsp = ./lsp.nix;
+	lsp = import ./lsp.nix;
 
 	lsp-format = { enable = true; };
 
