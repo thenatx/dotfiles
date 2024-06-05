@@ -19,7 +19,7 @@
 		enable = true;
 		backgroundColour = "#000000";
 		maxHeight = 20;
-		maxWidth = 40;
+		maxWidth = 39;
 		timeout = 3000;
 		topDown = false;
 	};
