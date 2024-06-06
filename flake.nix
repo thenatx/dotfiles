@@ -16,9 +16,9 @@
         formatter = pkgs.alejandra;
 
         devShells = {
-          rust = import ./dev/rust.nix; 
-          node = import ./dev/node.nix; 
-          python = import ./dev/python.nix;
+          rust = import ./dev/rust.nix { inherit inputs system; }; 
+          node = import ./dev/node.nix { inherit pkgs; };
+          python = import ./dev/python.nix { inherit pkgs; };
         };
       };
     };
