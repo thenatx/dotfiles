@@ -4,9 +4,9 @@
     ./fonts.nix
   ];
 
-	programs = {
-		dconf.enable = true;
-	};
+  programs = {
+    dconf.enable = true;
+  };
 
   environment.defaultPackages = with pkgs; [home-manager];
 }

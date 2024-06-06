@@ -16,9 +16,9 @@
         formatter = pkgs.alejandra;
 
         devShells = {
-          rust = import ./dev/rust.nix { inherit inputs system; }; 
-          node = import ./dev/node.nix { inherit pkgs; };
-          python = import ./dev/python.nix { inherit pkgs; };
+          rust = import ./dev/rust.nix {inherit inputs system;};
+          node = import ./dev/node.nix {inherit pkgs;};
+          python = import ./dev/python.nix {inherit pkgs;};
         };
       };
     };
@@ -58,5 +58,5 @@
       url = "github:nix-community/fenix/monthly";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-	};
+  };
 }

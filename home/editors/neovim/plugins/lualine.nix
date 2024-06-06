@@ -1,15 +1,14 @@
 {
   enable = true;
-	globalstatus = true;
+  globalstatus = true;
 
   componentSeparators = {
-		left = "";
-  	right = "";
-	};
+    left = "";
+    right = "";
+  };
 
   sectionSeparators = {
     left = "";
     right = "";
   };
-
 }

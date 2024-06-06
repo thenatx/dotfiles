@@ -1,5 +1,5 @@
-{ config, ... }: let 
-  cursor = config.home.pointerCursor; 
+{config, ...}: let
+  cursor = config.home.pointerCursor;
 in {
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
@@ -67,7 +67,7 @@ in {
 
     misc = {
       font_family = "ComicSans";
-			force_default_wallpaper = 0;
+      force_default_wallpaper = 0;
       disable_hyprland_logo = false;
     };
 

@@ -5,7 +5,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = ["git"];
-      theme = ""; 
+      theme = "";
     };
 
     autosuggestion.enable = true;

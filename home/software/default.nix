@@ -9,11 +9,11 @@
   ];
 
   home.packages = with pkgs; [
-		# Clients
-		webcord-vencord
+    # Clients
+    webcord-vencord
 
     # Browser
-		brave
+    brave
 
     # Image related (image viewer, wallpaper manager and screenshots)
     loupe
@@ -30,7 +30,7 @@
 
     # command utils
     brightnessctl
-		xdg-utils
+    xdg-utils
     trash-cli
     neofetch
     slurp
