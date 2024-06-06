@@ -8,22 +8,15 @@
 	
 	# Language server (lsp)
 	lsp = import ./lsp.nix;
-
 	lsp-format = { enable = true; };
 
 	# Completion
-	cmp = {
-		enable = true;
-
-		settings = { 
-		  window = {
-				completion.border = "rounded";
-				documentation.border = "rounded";
-			};
-		};
-	};
-
+	cmp = import ./completion.nix;
+	cmp-path = { enable = true; };
+	cmp-buffer = { enable = true; };
+	cmp_luasnip = { enable = true; };
 	cmp-cmdline = { enable = true; };
+	cmp-nvim-lsp = { enable = true; };
 
 	# User interface (UI)
 	noice = { enable = true; };
