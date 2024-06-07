@@ -46,7 +46,7 @@ in {
       rounding = 10;
 
       active_opacity = 0.85;
-      inactive_opacity = 0.85;
+      inactive_opacity = 0.80;
       fullscreen_opacity = 1.0;
 
       drop_shadow = false;
@@ -157,7 +157,7 @@ in {
     };
 
     windowrulev2 = [
-      "opacity 0.7,class:^kitty"
+      "opacity 0.65,class:^kitty"
       "opacity 0.8,class:^Discord"
     ];
   };
