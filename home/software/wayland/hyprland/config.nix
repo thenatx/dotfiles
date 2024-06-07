@@ -125,7 +125,7 @@ in {
       # Special misc
       ", XF86AudioMute, exec, pamixer --toggle-mute"
       ", XF86AudioRaiseVolume, exec, pamixer --increase 5"
-      ", XF86AudioLowerVolume, exec, pamixer -decrease 5"
+      ", XF86AudioLowerVolume, exec, pamixer --decrease 5"
 
       ", XF86AudioPlay, exec, playerctl play-pause"
       ", XF86AudioStop, exec, playerctl pause"
