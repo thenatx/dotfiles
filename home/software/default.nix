@@ -10,7 +10,7 @@
 
   home.packages = with pkgs; [
     # Clients
-    webcord-vencord
+    vesktop
 
     # Browser
     brave
