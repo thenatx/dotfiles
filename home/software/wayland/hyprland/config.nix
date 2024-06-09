@@ -1,4 +1,4 @@
-{config, ...}: let
+{config, inputs}: let
   cursor = config.home.pointerCursor;
 in {
   wayland.windowManager.hyprland.settings = {
@@ -16,12 +16,13 @@ in {
 
     exec-once = [
       "swww-daemon"
-      "hyprctl setcursor ${cursor.name} ${builtins.toString cursor.size}"
       "hypridle"
-      "dunst"
-
+			"udiskie"
+			"dunst"
+			"swww img ${inputs.wallpapers."purple.png"}"
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
+      "hyprctl setcursor ${cursor.name} ${builtins.toString cursor.size}"
     ];
 
     general = {
