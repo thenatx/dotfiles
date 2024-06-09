@@ -25,7 +25,11 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-		wallpapers = "github:NatProgramer/wallpapers";
+
+		wallpapers = {
+			url = "github:NatProgramer/wallpapers";
+			flake = false;
+		};
 	
     hm = {
       url = "github:nix-community/home-manager";
