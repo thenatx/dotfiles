@@ -40,5 +40,5 @@
   bufferline = {enable = true;};
 
   # Misc
-  neocord = {enable = true;};
+  # neocord = {enable = true;};
 }
