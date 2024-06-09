@@ -1,4 +1,4 @@
-{config, inputs}: let
+{config, inputs, ...}: let
   cursor = config.home.pointerCursor;
 in {
   wayland.windowManager.hyprland.settings = {
