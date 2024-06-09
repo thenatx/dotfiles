@@ -677,6 +677,7 @@
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
         "sss": "sss",
+        "wallpapers": "wallpapers",
         "yazi": "yazi"
       }
     },
@@ -857,6 +858,22 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1717465983,
+        "narHash": "sha256-aaS1XKbYqYLdQJeuWTyQMeA3L6LajX9uvE9B2dLETnc=",
+        "owner": "NatProgramer",
+        "repo": "wallpapers",
+        "rev": "30650cd43ac88b0d611d8c370315c0dcd4670aa4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NatProgramer",
+        "repo": "wallpapers",
         "type": "github"
       }
     },
