@@ -6,62 +6,62 @@
 	--font: 'figtree';
 
 	/* top left corner text */
-	--corner-text: 'Midnight';
+	--corner-text: 'Catppuccin';
 
 	/* color of status indicators and window controls */
-	--online-indicator: var(--accent-2);
+	--online-indicator: #a6e3a1;
 	/* change to #23a55a for default green */
-	--dnd-indicator: hsl(340, 60%, 60%);
+	--dnd-indicator: #f38ba8;
 	/* change to #f13f43 for default red */
-	--idle-indicator: hsl(50, 60%, 60%);
+	--idle-indicator: #f9e2af;
 	/* change to #f0b232 for default yellow */
-	--streaming-indicator: hsl(260, 60%, 60%);
+	--streaming-indicator: #cba6f7;
 	/* change to #593695 for default purple */
 
 	/* accent colors */
-	--accent-1: hsl(190, 70%, 60%);
+	--accent-1: hsl(267, 84%, 81%);
 	/* links */
-	--accent-2: hsl(190, 70%, 48%);
+	--accent-2: hsl(267, 84%, 81%);
 	/* general unread/mention elements */
-	--accent-3: hsl(190, 70%, 42%);
+	--accent-3: hsl(267, 84%, 81%);
 	/* accent buttons */
-	--accent-4: hsl(190, 70%, 36%);
+	--accent-4: hsl(267, 70%, 73%);
 	/* accent buttons when hovered */
-	--accent-5: hsl(190, 70%, 30%);
+	--accent-5: hsl(267, 55%, 65%);
 	/* accent buttons when clicked */
-	--mention: hsla(190, 80%, 52%, 0.1);
+	--mention: hsla(267, 70%, 71%, 0.1);
 	/* mentions & mention messages */
-	--mention-hover: hsla(190, 80%, 52%, 0.05);
+	--mention-hover: hsla(267, 70%, 71%, 0.05);
 	/* mentions & mention messages when hovered */
 
 	/* text colors */
-	--text-0: white;
+	--text-0: var(--bg-4);
 	/* text on colored elements */
-	--text-1: var(--text-2);
-	/* other normally white text */
-	--text-2: hsl(220, 25%, 70%);
+	--text-1: hsl(220, 40%, 95%);
+	/* bright text on colored elements */
+	--text-2: hsl(226, 64%, 88%);
 	/* headings and important text */
-	--text-3: hsl(220, 15%, 60%);
+	--text-3: hsl(228, 24%, 72%);
 	/* normal text */
-	--text-4: hsl(220, 15%, 40%);
+	--text-4: hsl(230, 13%, 55%);
 	/* icon buttons and channels */
-	--text-5: hsl(220, 15%, 25%);
+	--text-5: hsl(233, 12%, 39%);
 	/* muted channels/chats and timestamps */
 
 	/* background and dark colors */
-	--bg-1: hsla(220, 15%, 20%, 0.5);
+	--bg-1: hsl(234, 13%, 31%, 0.7);
 	/* dark buttons when clicked */
-	--bg-2: hsla(220, 15%, 16%, 0.5);
+	--bg-2: hsl(237, 16%, 23%, 0.6);
 	/* dark buttons */
-	--bg-3: hsla(220, 15%, 13%, 0.5);
+	--bg-3: hsl(240, 21%, 12%, 0.5);
 	/* spacing, secondary elements */
-	--bg-4: hsla(220, 15%, 10%, 0.5);
+	--bg-4: hsl(240, 21%, 15%, 0.3);
 	/* main background color */
-	--hover: hsla(230, 20%, 40%, 0.1);
+	--hover: hsla(237, 18%, 53%, 0.1);
 	/* channels and buttons when hovered */
-	--active: hsla(220, 20%, 40%, 0.2);
+	--active: hsla(235, 15%, 53%, 0.2);
 	/* channels and buttons when clicked or selected */
-	--message-hover: hsla(220, 0%, 0%, 0.1);
+	--message-hover: hsla(240, 0%, 0%, 0.1);
 	/* messages when hovered */
 
 	/* amount of spacing and padding */

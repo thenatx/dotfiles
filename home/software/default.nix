@@ -4,10 +4,10 @@
     ./gtk.nix
     ./sss.nix
     ./xdg.nix
-		./discord.nix
 
     ./anyrun
     ./wayland
+		./desktop/default.nix
   ];
 
   home.packages = with pkgs; [
