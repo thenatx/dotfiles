@@ -4,6 +4,8 @@
     ./gtk.nix
     ./sss.nix
     ./xdg.nix
+		./discord.nix
+
     ./anyrun
     ./wayland
   ];
