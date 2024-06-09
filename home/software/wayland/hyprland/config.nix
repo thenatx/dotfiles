@@ -19,8 +19,11 @@ in {
       "hypridle"
 			"udiskie"
 			"dunst"
-			"swww img ${inputs.wallpapers."purple.png"}"
-      "wl-paste --type text --watch cliphist store"
+
+ 			# can quit the home.file at /home/default.nix
+			# if you will use only one wallpaper
+			"swww img ${inputs.wallpapers}/purple.png"
+			"wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
       "hyprctl setcursor ${cursor.name} ${builtins.toString cursor.size}"
     ];
