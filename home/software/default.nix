@@ -9,9 +9,6 @@
   ];
 
   home.packages = with pkgs; [
-    # Clients
-    vesktop
-
     # Browser
     brave
 
