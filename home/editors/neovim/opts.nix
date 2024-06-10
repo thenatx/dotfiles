@@ -7,7 +7,7 @@
   tabstop = 2;
 
   clipboard = {
-    register = "nonamed";
+    register = "unnamedplus";
     providers.wl-copy.enable = true;
   };
 }
