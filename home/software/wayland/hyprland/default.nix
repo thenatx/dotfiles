@@ -18,7 +18,7 @@
     wayland-utils
     wl-clipboard
     udiskie
-		
-		# Hmm, probably i will use ags widgets (didn't liked yuck language)
+
+    # Hmm, probably i will use ags widgets (didn't liked yuck language)
   ];
 }
