@@ -1,14 +1,18 @@
-{self, inputs, ...}: {
+{
+  self,
+  inputs,
+  ...
+}: {
   imports = ["${self}/scripts"];
 
   home = rec {
     username = "thenat";
     homeDirectory = "/home/thenat";
     stateVersion = "23.11";
-		
-		file = {
-			"${homeDirectory}/Pictures/wallpapers".source = inputs.wallpapers;
-		};
+
+    file = {
+      "${homeDirectory}/Pictures/wallpapers".source = inputs.wallpapers;
+    };
   };
 
   manual = {
