@@ -1,8 +1,10 @@
-{ pkgs, config, ... }:
 {
-	home.packages = [ pkgs.vesktop ];
+  pkgs,
+  config,
+  ...
+}: {
+  home.packages = [pkgs.vesktop];
 
-	home.file."${config.xdg.configHome}/vesktop/themes/mocha.css".source = 
-		./mocha.css;
+  home.file."${config.xdg.configHome}/vesktop/themes/mocha.css".source =
+    ./mocha.css;
 }
-

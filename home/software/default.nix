@@ -7,7 +7,7 @@
 
     ./anyrun
     ./wayland
-		./desktop/default.nix
+    ./desktop/default.nix
   ];
 
   home.packages = with pkgs; [
