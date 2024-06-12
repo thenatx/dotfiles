@@ -1,5 +1,6 @@
 {
   inputs,
+	pkgs,
   ...
 }: let
   toLua = raw: "lua << EOF\n${raw}\nEOF\n";
@@ -24,7 +25,7 @@ in {
 
     extraPlugins = [
       {
-        plugin = ./plugins/codeshot.nix;
+        plugin = import ./plugins/codeshot.nix {inherit pkgs; };
         config = toLua ''
          	 	require("codeshot").setup({
            	 	copy = "%c | wl-copy";
@@ -38,7 +39,7 @@ in {
         '';
       }
       {
-       	plugin = ./plugins/cord.nix;
+       	plugin = import ./plugins/cord.nix {inherit pkgs; };
        	config = toLua "require(\"cord\").setup()";
       }
     ];

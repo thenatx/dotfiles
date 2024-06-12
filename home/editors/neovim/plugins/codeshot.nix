@@ -1,4 +1,4 @@
-{ pkgs, ... }: let
+{ pkgs }: let
     codeshot-src = pkgs.fetchFromGitHub {
       owner = "sergioribera";
       repo = "codeshot.nvim";
