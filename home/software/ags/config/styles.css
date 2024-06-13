@@ -1,0 +1,73 @@
+/*
+  Catppuccin mocha
+
+	base: #1e1e2e;
+	text: #cdd6f4;
+	pink: #f5c2e7;
+	mauve: #cba6f7;
+	red: #f38ba8;
+	maroon: #eba0ac;
+	peach: #fab387;
+	yellow: #f9e2af;
+	green: #a6e3a1;
+	teal: #94e2d5;
+	sky: #89dceb;
+	sapphire: #74c7ec;
+	blue: #89b4fa;
+	lavender: #b4befe;
+	text: #cdd6f4;
+	subtext1: #bac2de;
+	subtext0: #a6adc8;
+	overlay2: #9399b2;
+	overlay1: #7f849c;
+	overlay0: #6c7086;
+	surface2: #585b70;
+	surface1: #45475a;
+	surface0: #313244;
+	base: #1e1e2e;
+	mantle: #181825;
+	mocha-crust: #11111b;
+
+*/
+
+* {
+	min-height: 0;
+	font-size: 14px;
+	font-style: normal;
+	font-family: "GeistMono Nerd Font";
+}
+
+window.bar {
+	background: transparent;
+}
+
+.bar-left,
+.bar-center,
+.bar-right {
+	padding: 5px 10px 0px 10px;
+}
+
+.bar-clock,
+.win-title,
+.bar-volume,
+.bar-workspaces,
+.bar-media,
+.launcher-button {
+	padding: 3px 10px;
+	border-radius: 7px;
+	color: #cdd6f4;
+	background: #1e1e2e;
+}
+
+.win-title {
+	min-width: 100px;
+}
+
+.launcher-button {
+	font-size: 20px;
+	color: #b4befe;
+}
+
+.volume-icon {
+	margin-right: 5px;
+}

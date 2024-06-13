@@ -30,6 +30,8 @@
       url = "github:NatProgramer/wallpapers";
       flake = false;
     };
+		
+		ags.url = "github:Aylur/ags";
 
     hm = {
       url = "github:nix-community/home-manager";

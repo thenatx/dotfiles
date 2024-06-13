@@ -5,9 +5,10 @@
     ./sss.nix
     ./xdg.nix
 
+		./ags
     ./anyrun
     ./wayland
-    ./desktop/default.nix
+    ./desktop
   ];
 
   home.packages = with pkgs; [

@@ -22,7 +22,8 @@ in {
       "swww-daemon"
       "hypridle"
       "udiskie"
-      "dunst"
+			"dunst"
+			"ags"
 
       # can quit the home.file at /home/default.nix
       # if you will use only one wallpaper
@@ -39,8 +40,8 @@ in {
 
       border_size = 2;
       no_border_on_floating = true;
-      "col.active_border" = "#DD33DD";
-      "col.inactive_border" = "#101010";
+      col.active_border = "#DD33DD";
+      col.inactive_border = "#101010";
 
       layout = "dwindle";
       resize_corner = 1;
