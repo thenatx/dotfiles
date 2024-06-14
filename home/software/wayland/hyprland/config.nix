@@ -40,8 +40,8 @@ in {
 
       border_size = 2;
       no_border_on_floating = true;
-      col.active_border = "#DD33DD";
-      col.inactive_border = "#101010";
+      "col.active_border" = "#b4befe";
+      "col.inactive_border" = "#7f849c";
 
       layout = "dwindle";
       resize_corner = 1;
