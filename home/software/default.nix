@@ -12,12 +12,8 @@
   ];
 
   home.packages = with pkgs; [
-    # Browser
-    brave
-
     # Image related (image viewer, wallpaper manager and screenshots)
     loupe
-    swww
     grim
 
     # Audio related
