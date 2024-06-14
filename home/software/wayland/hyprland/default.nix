@@ -18,6 +18,7 @@
     wayland-utils
     wl-clipboard
     udiskie
+    swww
 
     # Hmm, probably i will use ags widgets (didn't liked yuck language)
   ];
