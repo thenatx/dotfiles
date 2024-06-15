@@ -5,6 +5,7 @@
 }: {
   programs.firefox = {
     enable = true;
+
     package = pkgs.wrapFirefox pkgs.firefox-devedition-unwrapped {
       extraPolicies = {
         DisableFirefoxStudies = true;
@@ -14,13 +15,16 @@
         PromptForDownloadLocation = true;
       };
     };
+
     profiles.default = {
       id = 0;
       name = "dev-edition-default";
+
       extensions = with inputs.firefox-extensions.packages.${pkgs.system}; [
         ublock-origin
         bitwarden
       ];
+
       search.force = true;
       search.engines = {
         "Home Manager NixOs" = {

@@ -5,7 +5,7 @@
     ./sss.nix
     ./xdg.nix
 
-		./ags
+    ./ags
     ./anyrun
     ./wayland
     ./desktop

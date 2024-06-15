@@ -22,8 +22,8 @@ in {
       "swww-daemon"
       "hypridle"
       "udiskie"
-			"dunst"
-			"ags"
+      "dunst"
+      "ags"
 
       # can quit the home.file at /home/default.nix
       # if you will use only one wallpaper

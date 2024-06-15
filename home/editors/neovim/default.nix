@@ -1,6 +1,6 @@
 {
   inputs,
-	pkgs,
+  pkgs,
   ...
 }: let
   toLua = raw: "lua << EOF\n${raw}\nEOF\n";
@@ -25,22 +25,22 @@ in {
 
     extraPlugins = [
       {
-        plugin = import ./plugins/codeshot.nix {inherit pkgs; };
+        plugin = import ./plugins/codeshot.nix {inherit pkgs;};
         config = toLua ''
-         	 	require("codeshot").setup({
-           	 	copy = "%c | wl-copy";
-             	fonts = "";
-          		shadow_image = true;
-             	use_current_theme = true;
-	            background = "#AAAAFF";
-             	author = "@Thenat";
-             	author_color = "#000";
-          	})
+          	require("codeshot").setup({
+          	 	copy = "%c | wl-copy";
+            	fonts = "";
+          	shadow_image = true;
+            	use_current_theme = true;
+            background = "#AAAAFF";
+            	author = "@Thenat";
+            	author_color = "#000";
+          })
         '';
       }
       {
-       	plugin = import ./plugins/cord.nix {inherit pkgs; };
-       	config = toLua "require(\"cord\").setup()";
+        plugin = import ./plugins/cord.nix {inherit pkgs;};
+        config = toLua "require(\"cord\").setup()";
       }
     ];
   };

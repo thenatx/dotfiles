@@ -30,8 +30,8 @@
       url = "github:NatProgramer/wallpapers";
       flake = false;
     };
-		
-		ags.url = "github:Aylur/ags";
+
+    ags.url = "github:Aylur/ags";
 
     hm = {
       url = "github:nix-community/home-manager";
@@ -56,7 +56,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    firefox-addons = {
+    firefox-extensions = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };

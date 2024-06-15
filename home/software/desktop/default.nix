@@ -1,6 +1,7 @@
 {...}: {
   imports = [
-		./discord
-		./browsers/brave.nix
-	];
+    ./discord
+    ./browsers/brave.nix
+    ./browsers/firefox.nix
+  ];
 }
