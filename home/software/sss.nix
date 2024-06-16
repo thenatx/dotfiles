@@ -12,9 +12,9 @@
       shadow = true;
       shadow-image = true;
       colors = {
-        background = "#DD66FF";
-        author = "#FFFFFF";
-        shadow = "#333333";
+        background = "#b4befe";
+        author = "#000000";
+        shadow = "#1e1e2e";
       };
     };
 
