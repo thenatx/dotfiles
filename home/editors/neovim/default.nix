@@ -31,12 +31,9 @@ in {
         	require('codeshot').setup({
           	copy = '%c | wl-copy';
            	fonts = "";
-           	author = '@Thenat';
 						save_format = 'raw';
          		shadow_image = true;
-            background = '#b4befe';
-						theme = 'base16-mocha.dark';
-           	author_color = '#1e1e2e';
+						theme = 'InspiredGitHub';
 						use_current_theme = false;
 
 						silent = false;
