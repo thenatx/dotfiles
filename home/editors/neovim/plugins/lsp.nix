@@ -26,8 +26,8 @@
       enable = true;
     };
 
-    bashls = {
-      enable = true;
-    };
+    # bashls = {
+    #   enable = true;
+    # };
   };
 }
