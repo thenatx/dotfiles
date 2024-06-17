@@ -33,7 +33,7 @@ in {
            	fonts = "";
 						save_format = 'raw';
          		shadow_image = true;
-						theme = 'InspiredGitHub';
+						theme = 'Catppuccin Mocha';
 						use_current_theme = false;
 
 						silent = false;
