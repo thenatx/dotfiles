@@ -47,10 +47,6 @@ in {
       resize_corner = 1;
     };
 
-    master = {
-      new_is_master = true;
-    };
-
     decoration = {
       rounding = 10;
 
