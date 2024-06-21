@@ -1,4 +1,4 @@
-{...}: let
+{inputs,...}: let
   font_family = "GeistMono Nerd Font";
 in {
   programs.hyprlock = {
@@ -13,7 +13,7 @@ in {
       background = [
         {
           monitor = "";
-          path = "screenshot";
+          path = "${inputs.wallpapers}/${toString ./wallpaper.nix}";
           blur_passes = 3;
           blur_size = 6;
           noise = 0.1;
