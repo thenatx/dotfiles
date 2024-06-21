@@ -8,7 +8,7 @@ in {
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
 		
-		"browser" = "brave";
+		"$browser" = "brave";
     "$terminal" = "kitty";
     "$fileManager" = "kitty yazi";
     "$appLauncher" = "anyrun";
