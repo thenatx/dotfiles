@@ -7,7 +7,8 @@
 in {
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
-
+		
+		"browser" = "brave";
     "$terminal" = "kitty";
     "$fileManager" = "kitty yazi";
     "$appLauncher" = "anyrun";
@@ -19,17 +20,17 @@ in {
     ];
 
     exec-once = [
-      "swww-daemon"
       "hypridle"
       "udiskie"
       "dunst"
       "ags"
 
-      # can quit the home.file at /home/default.nix
-      # if you will use only one wallpaper
-      "swww img ${inputs.wallpapers}/purple.png"
+      "swww-daemon"
+      "swww img ${inputs.wallpapers}/${toString ../wallpaper.nix}"
+
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
+
       "hyprctl setcursor ${cursor.name} ${builtins.toString cursor.size}"
     ];
 
@@ -79,6 +80,7 @@ in {
     bind = [
       # Apps
       "$mainMod, Q, exec, $terminal"
+      "$mainMod, B, exec, $browser"
       "$mainMod, E, exec, $fileManager"
       "$mainMod, M, exec, $appLauncher"
 
