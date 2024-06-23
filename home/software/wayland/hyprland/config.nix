@@ -172,7 +172,8 @@ in {
     windowrulev2 = [
       "opacity 0.65,class:^kitty"
 
-      "float,title:^(Open File)$"
+			"float,title:^(All Files)$" # For the download files window
+      "float,title:^(Open File)$" # Searching files window
     ];
   };
 }
