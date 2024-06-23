@@ -1,7 +1,6 @@
 {...}: {
-  imports = [./settings.nix];
-
   programs.alacritty = {
     enable = true;
+    settings = ./settings.nix;
   };
 }
