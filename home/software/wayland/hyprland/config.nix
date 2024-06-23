@@ -4,11 +4,17 @@
   ...
 }: let
   cursor = config.home.pointerCursor;
+
+  border = {
+    left = "rgb(a4befe)";
+    right = "rgb(c4befe)";
+    inactive = "rgb(6c7086)";
+  };
 in {
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
-		
-		"$browser" = "brave";
+
+    "$browser" = "brave";
     "$terminal" = "kitty";
     "$fileManager" = "kitty yazi";
     "$appLauncher" = "anyrun";
@@ -41,8 +47,8 @@ in {
 
       border_size = 2;
       no_border_on_floating = true;
-      "col.active_border" = "#b4befe";
-      "col.inactive_border" = "#7f849c";
+      "col.active_border" = "${border.left} ${border.right} 45deg";
+      "col.inactive_border" = border.inactive;
 
       layout = "dwindle";
       resize_corner = 1;
@@ -165,7 +171,8 @@ in {
 
     windowrulev2 = [
       "opacity 0.65,class:^kitty"
-      "opacity 0.8,class:^Discord"
+
+      "float,title:^(Open File)$"
     ];
   };
 }
