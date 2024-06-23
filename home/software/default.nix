@@ -4,6 +4,7 @@
     ./gtk.nix
     ./sss.nix
     ./xdg.nix
+		./dunst.nix
 
     ./ags
     ./anyrun
@@ -20,14 +21,9 @@
     pamixer
     pavucontrol
 
-    # Notify daemon
-    dunst
-    libnotify
-
     # command utils
     brightnessctl
     xdg-utils
-    trash-cli
     neofetch
     slurp
   ];
