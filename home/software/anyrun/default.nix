@@ -1,6 +1,5 @@
 {
   pkgs,
-  config,
   inputs,
   ...
 }: {
@@ -13,10 +12,7 @@
     config = {
       plugins = with inputs.anyrun.packages.${pkgs.system}; [
         applications
-        translate
-        symbols
-        kidex
-        shell
+				websearch
       ];
 
       y.absolute = 15;
@@ -26,13 +22,13 @@
       hidePluginInfo = true;
     };
 
-    extraCss = builtins.readFile (./. + "/anyrun-dark.css");
+    extraCss = builtins.readFile (./anyrun-dark.css);
 
     extraConfigFiles."applications.ron".text = ''
       Config(
         desktop_actions: false,
         max_entries: 10,
-        terminal: Some("wezterm"),
+        terminal: Some("kitty"),
       )
     '';
   };
