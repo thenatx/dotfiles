@@ -1,13 +1,21 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [hypridle];
+{pkgs, ...}: let
+	# I get this of https://github.com/linuxmobile/kaku, thanks to L I N U X
+  suspendScript = pkgs.writeShellScript "suspend-script" ''
+    ${pkgs.pipewire}/bin/pw-cli i all 2>&1 | ${pkgs.ripgrep}/bin/rg running -q
+    # only suspend if audio isn't running
+    if [ $? == 1 ]; then
+      ${pkgs.systemd}/bin/systemctl suspend
+    fi
+  '';
+
+in {
+  home.packages = with pkgs; [hypridle]; # To put the command in your path
 
   services.hypridle = {
     enable = true;
     settings = {
       general = {
         lock_cmd = "pidof hyprlock || hyprlock";
-        before_sleep_cmd = "loginctl lock-session";
-        after_sleep_cmd = "hyprctl dispatch dpms on";
       };
 
       listener = [
@@ -30,7 +38,8 @@
 
         {
           timeout = 1200;
-          on-timeout = "systemctl suspend";
+          on-timeout = suspendScript.outPath;
+          on-resume = "hyprctl dispatch dpms on";
         }
       ];
     };
