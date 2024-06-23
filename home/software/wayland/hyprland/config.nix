@@ -45,7 +45,7 @@ in {
       gaps_in = 5;
       gaps_out = 10;
 
-      border_size = 2;
+      border_size = 1;
       no_border_on_floating = true;
       "col.active_border" = "${border.left} ${border.right} 45deg";
       "col.inactive_border" = border.inactive;
