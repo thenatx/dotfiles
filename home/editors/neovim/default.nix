@@ -17,7 +17,7 @@ in {
     viAlias = true;
     vimAlias = true;
 
-		globals.mapleader = ";";
+    globals.mapleader = ";";
 
     opts = import ./opts.nix;
     plugins = import ./plugins;
@@ -28,16 +28,16 @@ in {
       {
         plugin = import ./plugins/codeshot.nix {inherit pkgs;};
         config = toLua ''
-        	require('codeshot').setup({
-          	copy = '%c | wl-copy';
-           	fonts = "";
-						save_format = 'raw';
-         		shadow_image = true;
-						theme = 'Catppuccin Mocha';
-						use_current_theme = false;
+            	require('codeshot').setup({
+              	copy = '%c | wl-copy';
+               	fonts = "";
+          save_format = 'raw';
+             		shadow_image = true;
+          theme = 'Catppuccin Mocha';
+          use_current_theme = false;
 
-						silent = false;
-          })
+          silent = false;
+              })
         '';
       }
       {
