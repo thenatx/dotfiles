@@ -1,61 +1,100 @@
-{inputs,...}: let
+{
+  inputs,
+  config,
+  ...
+}: let
   font_family = "GeistMono Nerd Font";
+  colors = rec {
+    base = "rgb(1e1e2e)";
+    text = "rgb(${textAlpha})";
+
+    surface0 = "rgb(313244)";
+    accent = "rgb(${accentAlpha})";
+    yellow = "rgb(f9e2af)";
+    red = "rgb(f38ba8)";
+
+    textAlpha = "cdd6f4";
+    accentAlpha = "b4befe"; # Lavender
+  };
 in {
   programs.hyprlock = {
     enable = true;
     settings = {
       general = {
         disable_loading_bar = true;
-        hide_cursor = false;
-        no_fade_in = true;
+        hide_cursor = true;
       };
 
-      background = [
+      background = {
+        monitor = "";
+        # The "screenshot" option, throws a solid red color and disble the key board, i try solve that then
+        path = "${inputs.wallpapers}/${toString ./wallpaper.nix}";
+        blur_passes = 6;
+        color = colors.base;
+      };
+
+      label = [
         {
           monitor = "";
-          path = "${inputs.wallpapers}/${toString ./wallpaper.nix}";
-          blur_passes = 3;
-          blur_size = 6;
-          noise = 0.1;
-          contrast = 1.1;
-          brightness = 1.2;
+          text = ''
+            cmd[update:30000] echo "$(date +"%R")"
+          '';
+          color = colors.text;
+          font_size = 90;
+          font_family = font_family;
+          position = "-30, 0";
+          halign = "right";
+          valign = "top";
         }
-      ];
 
-      input-fields = [
-        {
-          monitor = "eDP-1";
-
-          size = {
-            width = 300;
-            height = 50;
-          };
-
-          outline_thickness = 2;
-
-          fade_on_empty = false;
-
-          dots_spacing = 0.3;
-          dots_center = true;
-        }
-      ];
-
-      labels = [
         {
           monitor = "";
-          text = "$TIME";
-          inherit font_family;
-          font_size = 50;
-
-          position = {
-            x = 0;
-            y = 80;
-          };
-
-          valign = "center";
-          halign = "center";
+          text = ''
+            cmd[update:43200000] echo "$(date +"%A, %d %B %Y")"
+          '';
+          color = colors.text;
+          font_size = 25;
+          font_family = font_family;
+          position = "-30, -150";
+          halign = "right";
+          valign = "top";
         }
       ];
+
+      image = {
+        monitor = "";
+        path = "${config.home.homeDirectory}/.face";
+        size = 100;
+        border_color = colors.accent;
+
+        position = "0, 75";
+        halign = "center";
+        valign = "center";
+      };
+
+      input-field = {
+        monitor = "";
+        size = "300, 60";
+        outline_thickness = 4;
+        dots_size = 0.2;
+        dots_spacing = 0.2;
+        dots_center = true;
+        outer_color = colors.accent;
+        inner_color = colors.surface0;
+        font_color = colors.text;
+        fade_on_empty = false;
+        placeholder_text = ''
+          <span foreground="##${colors.textAlpha}"><i>󰌾 Logged in as </i><span foreground="##${colors.accentAlpha}">$USER</span></span>
+        '';
+        hide_input = false;
+        check_color = colors.accent;
+        fail_color = colors.red;
+        fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
+        capslock_color = colors.yellow;
+        position = "0, -35";
+        halign = "center";
+        valign = "center";
+      };
     };
   };
 }
