@@ -24,12 +24,27 @@
 
     extraCss = builtins.readFile (./anyrun-dark.css);
 
-    extraConfigFiles."applications.ron".text = ''
-      Config(
-        desktop_actions: false,
-        max_entries: 10,
-        terminal: Some("kitty"),
-      )
-    '';
+    extraConfigFiles = {
+			"applications.ron".text = ''
+    	  Config(
+  	      desktop_actions: false,
+	        max_entries: 10,
+        	terminal: Some("kitty"),
+      	)
+    	'';
+
+			"websearch.ron".text = ''
+				Config(
+        	prefix: "?",
+          engines: [
+            DuckDuckGo,
+            Custom(
+              name: "nixpkgs",
+              url: "search.nixos.org/packages?query={}&channel=unstable",
+            )
+					]
+				)
+			'';
+		};
   };
 }
