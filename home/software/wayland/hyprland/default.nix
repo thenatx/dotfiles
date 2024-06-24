@@ -16,10 +16,12 @@
   # utils packages for wayland (Hyprland)
   home.packages = with pkgs; [
     wayland-utils
+    brightnessctl
     wl-clipboard
     udiskie
+    loupe
+    slurp
     swww
-
-    # Hmm, probably i will use ags widgets (didn't liked yuck language)
+		grim
   ];
 }

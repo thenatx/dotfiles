@@ -7,24 +7,18 @@
 		./dunst.nix
 
     ./ags
+		./rice
     ./anyrun
     ./wayland
     ./desktop
   ];
 
   home.packages = with pkgs; [
-    # Image related (image viewer, wallpaper manager and screenshots)
-    loupe
-    grim
-
     # Audio related
     pamixer
     pavucontrol
 
     # command utils
-    brightnessctl
     xdg-utils
-    neofetch
-    slurp
   ];
 }
