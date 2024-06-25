@@ -2,6 +2,6 @@
 	home.packages = with pkgs; [ cava ];
 
 	home.file = {
-		"${config.xdg.configHome}/cava".source = ./mocha.nix;
+		"${config.xdg.configHome}/cava/config".text = import ./mocha.nix;
 	};
 }

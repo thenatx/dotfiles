@@ -4,6 +4,6 @@
 	];
 
 	home.file = {
-		"${config.xdg.configHome}/neofetch".source = ./small.nix;
+		"${config.xdg.configHome}/neofetch/config.conf".text = import ./small.nix;
 	};
 }
