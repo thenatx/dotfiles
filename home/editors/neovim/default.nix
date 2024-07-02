@@ -27,22 +27,28 @@ in {
     extraPlugins = [
       {
         plugin = import ./plugins/codeshot.nix {inherit pkgs;};
-        config = toLua ''
-            	require('codeshot').setup({
-              	copy = '%c | wl-copy';
-               	fonts = "";
-          save_format = 'raw';
-             		shadow_image = true;
-          theme = 'Catppuccin Mocha';
-          use_current_theme = false;
+        config = toLua ''require('codeshot').setup({
+          copy = '%c | wl-copy';
+         	fonts = "";
+         	save_format = 'raw';
+         	shadow_image = true;
+			    theme = 'Catppuccin Mocha';
+      	  use_current_theme = false;
 
-          silent = false;
-              })
-        '';
+			    silent = true;
+        })'';
       }
       {
         plugin = import ./plugins/cord.nix {inherit pkgs;};
-        config = toLua "require('cord').setup()";
+        config = toLua ''require('cord').setup({
+			  	lsp = {
+						show_problem_count = true;
+					};
+
+					idle = {
+						timeout = 90000,
+					};
+				})'';
       }
     ];
   };
