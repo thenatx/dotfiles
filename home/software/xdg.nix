@@ -8,7 +8,7 @@
     portal = {
       enable = true;
 
-      xdgOpenUsePortal = true;
+      xdgOpenUsePortal = false;
 
       config = {
         common.default = ["gtk"];
