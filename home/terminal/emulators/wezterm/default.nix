@@ -27,7 +27,7 @@
           },
         },
 
-        color_scheme = "Catppuccin Macchiato",
+        color_scheme = "Catppuccin Mocha",
 
         window_background_opacity = 0.8,
 
