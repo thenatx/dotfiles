@@ -38,9 +38,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    yazi.url = "github:sxyazi/yazi";
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -53,11 +50,6 @@
 
     sss = {
       url = "github:SergioRibera/sss";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    firefox-extensions = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
