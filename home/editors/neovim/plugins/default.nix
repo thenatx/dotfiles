@@ -105,7 +105,7 @@
           "                                  "
           "                                  "
           "                                  "
-          "      git@github.com:thenatx      "
+          "           T H E N A T           "
         ];
       }
       (padding 2)

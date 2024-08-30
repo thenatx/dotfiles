@@ -1,9 +1,8 @@
 {
   inputs,
-  config,
   ...
 }: let
-  font_family = "GeistMono Nerd Font";
+  font_family = "Comic Mono";
   colors = rec {
     base = "rgb(1e1e2e)";
     text = "rgb(${textAlpha})";
@@ -28,8 +27,8 @@ in {
       background = {
         monitor = "";
         # The "screenshot" option, throws a solid red color and disble the key board, i try solve that then
-        path = "${inputs.wallpapers}/${toString ./wallpaper.nix}";
-        blur_passes = 6;
+        path = "${inputs.wallpapers}/${import ./wallpaper.nix}";
+        blur_passes = 3;
         color = colors.base;
       };
 
@@ -40,11 +39,11 @@ in {
             cmd[update:30000] echo "$(date +"%R")"
           '';
           color = colors.text;
-          font_size = 90;
+          font_size = 50;
           font_family = font_family;
-          position = "-30, 0";
-          halign = "right";
-          valign = "top";
+          position = "0, 30";
+          halign = "center";
+          valign = "center";
         }
 
         {
@@ -53,24 +52,13 @@ in {
             cmd[update:43200000] echo "$(date +"%A, %d %B %Y")"
           '';
           color = colors.text;
-          font_size = 25;
+          font_size = 20;
           font_family = font_family;
-          position = "-30, -150";
+          position = "0, 0";
           halign = "right";
           valign = "top";
         }
       ];
-
-      image = {
-        monitor = "";
-        path = "${config.home.homeDirectory}/.face";
-        size = 100;
-        border_color = colors.accent;
-
-        position = "0, 75";
-        halign = "center";
-        valign = "center";
-      };
 
       input-field = {
         monitor = "";

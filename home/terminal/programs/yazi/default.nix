@@ -1,6 +1,5 @@
 {
   config,
-  inputs,
   pkgs,
   ...
 }: {
@@ -25,7 +24,7 @@
       };
     };
 
-    package = inputs.yazi.packages.x86_64-linux.default;
+    package = pkgs.yazi;
   };
   # Packages to enable full yazi features
   home.packages = with pkgs; [

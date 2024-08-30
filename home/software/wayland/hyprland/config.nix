@@ -32,7 +32,7 @@ in {
       "ags"
 
       "swww-daemon"
-      "swww img ${inputs.wallpapers}/${toString ../wallpaper.nix}"
+      "swww img ${inputs.wallpapers}/${import ../wallpaper.nix}"
 
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"

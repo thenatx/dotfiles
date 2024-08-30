@@ -1,2 +1,2 @@
 # Get of https://gtihub.com/thenatx/wallpapers
-"purple.png"
+"blue_distorsion_2.png"

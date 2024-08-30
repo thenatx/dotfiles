@@ -38,18 +38,18 @@ in {
 			    silent = true;
         })'';
       }
-      {
-        plugin = import ./plugins/cord.nix {inherit pkgs;};
-        config = toLua ''require('cord').setup({
-			  	lsp = {
-						show_problem_count = true;
-					};
+#      {
+#        plugin = import ./plugins/cord.nix {inherit pkgs;};
+#        config = toLua ''require('cord').setup({
+#			  	lsp = {
+#						show_problem_count = true;
+#					};
 
-					idle = {
-						timeout = 90000,
-					};
-				})'';
-      }
+#					idle = {
+#						timeout = 90000,
+#					};
+#				})'';
+#      }
     ];
   };
 }
