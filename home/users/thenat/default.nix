@@ -22,9 +22,9 @@ in {
 
     # Code editors
     "${editors}/zed"
-    "${editors}/neovim"
+    # "${editors}/neovim"
 
     # "${editors}/vscode"
-    # "${editors}/helix"
+    "${editors}/helix"
   ];
 }

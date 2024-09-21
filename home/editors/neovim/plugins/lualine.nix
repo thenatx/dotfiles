@@ -1,5 +1,4 @@
 {
-  enable = true;
   globalstatus = true;
 
   componentSeparators = {

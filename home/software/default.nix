@@ -4,10 +4,10 @@
     ./gtk.nix
     ./sss.nix
     ./xdg.nix
-		./dunst.nix
+    ./dunst.nix
 
     ./ags
-		./rice
+    ./rice
     ./anyrun
     ./wayland
     ./desktop

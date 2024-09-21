@@ -1,7 +1,4 @@
-{
-  inputs,
-  ...
-}: let
+{inputs, ...}: let
   font_family = "Comic Mono";
   colors = rec {
     base = "rgb(1e1e2e)";

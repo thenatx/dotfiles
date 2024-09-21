@@ -12,7 +12,7 @@
     config = {
       plugins = with inputs.anyrun.packages.${pkgs.system}; [
         applications
-				websearch
+        websearch
       ];
 
       y.absolute = 15;
@@ -22,29 +22,29 @@
       hidePluginInfo = true;
     };
 
-    extraCss = builtins.readFile (./anyrun-dark.css);
+    extraCss = builtins.readFile ./anyrun-dark.css;
 
     extraConfigFiles = {
-			"applications.ron".text = ''
-    	  Config(
-  	      desktop_actions: false,
-	        max_entries: 10,
-        	terminal: Some("kitty"),
-      	)
-    	'';
+      "applications.ron".text = ''
+        Config(
+          desktop_actions: false,
+          max_entries: 10,
+         	terminal: Some("kitty"),
+        )
+      '';
 
-			"websearch.ron".text = ''
-				Config(
-        	prefix: "?",
-          engines: [
-            DuckDuckGo,
-            Custom(
-              name: "nixpkgs",
-              url: "search.nixos.org/packages?query={}&channel=unstable",
-            )
-					]
-				)
-			'';
-		};
+      "websearch.ron".text = ''
+        Config(
+            	prefix: "?",
+              engines: [
+                DuckDuckGo,
+                Custom(
+                  name: "nixpkgs",
+                  url: "search.nixos.org/packages?query={}&channel=unstable",
+                )
+        	]
+        )
+      '';
+    };
   };
 }

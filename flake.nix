@@ -31,8 +31,6 @@
       flake = false;
     };
 
-    ags.url = "github:Aylur/ags";
-
     hm = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -43,15 +41,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    anyrun = {
-      url = "github:Kirottu/anyrun";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    sss = {
-      url = "github:SergioRibera/sss";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    anyrun.url = "github:Kirottu/anyrun/c6101a31a80b51e32e96f6a77616b609770172e0";
+    sss.url = "github:SergioRibera/sss/245914a6f19e421a9d81814ac9d275ba0f83cc41";
+    ags.url = "github:Aylur/ags";
 
     flake-parts = {
       url = "github:hercules-ci/flake-parts";

@@ -1,7 +1,11 @@
-{config, pkgs, ...}: {
-	home.packages = with pkgs; [ cava ];
+{
+  config,
+  pkgs,
+  ...
+}: {
+  home.packages = with pkgs; [cava];
 
-	home.file = {
-		"${config.xdg.configHome}/cava/config".text = import ./mocha.nix;
-	};
+  home.file = {
+    "${config.xdg.configHome}/cava/config".text = import ./mocha.nix;
+  };
 }

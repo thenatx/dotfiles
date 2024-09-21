@@ -1,6 +1,6 @@
 {...}: {
-	imports = [
-		./neofetch 
-		./cava
-	];	
+  imports = [
+    ./neofetch
+    ./cava
+  ];
 }

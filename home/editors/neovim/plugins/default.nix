@@ -1,27 +1,12 @@
-{
+{pkgs}: {
   # Plugin manager
-  lazy = import ./lazy.nix;
-
-  # Editor utils
-  treesitter = {enable = true;};
-  nvim-autopairs = {enable = true;};
+  lazy = import ./lazy.nix {inherit pkgs;};
 
   # Language server (lsp)
   lsp = import ./lsp.nix;
-  lsp-format = {enable = true;};
-
-  # Completion
-  cmp = import ./completion.nix;
-  cmp-path = {enable = true;};
-  cmp-buffer = {enable = true;};
-  cmp_luasnip = {enable = true;};
-  cmp-cmdline = {enable = true;};
-  cmp-nvim-lsp = {enable = true;};
 
   # User interface (UI)
-  noice = {enable = true;};
   notify = {
-    enable = true;
     backgroundColour = "#000000";
     maxHeight = 20;
     maxWidth = 39;
@@ -29,59 +14,7 @@
     topDown = false;
   };
 
-  telescope = {
-    enable = true;
-
-    settings = {
-      defaults = {
-        file_ignore_patterns = [
-          "^.git/"
-					"^target/"
-					"^node_modules/"
-        ];
-
-		    prompt_prefix = "   ";
-    		selection_caret = "  ";
-		    entry_prefix = "  ";
-		    initial_mode = "insert";
-		    layout_config = {
-    		  horizontal = {
-  	      	prompt_position = "top";
-		        preview_width = 0.55;
-  	      	results_width = 0.8;
-    			};
-
-      		vertical = {
-    		    mirror = false;
-		      };
-
-    		  width = 0.87;
-		      height = 0.80;
-    		  preview_cutoff = 120;
-		    };
-
-		    border = {};
- 			  borderchars = [ "─" "│" "─" "│" "╭" "╮" "╯" "╰" ];
-		    set_env = {
-		      COLORTERM = "truecolor";
-    		};
-      };
-    };
-
-    extensions = {
-      media-files.enable = true;
-    };
-  };
-
-  neo-tree = {
-    enable = true;
-    window = {
-      position = "right";
-    };
-  };
-
   alpha = {
-    enable = true;
     theme = null;
     iconsEnabled = true;
     layout = let
@@ -250,7 +183,4 @@
       }
     ];
   };
-
-  lualine = import ./lualine.nix;
-  bufferline = {enable = true;};
 }

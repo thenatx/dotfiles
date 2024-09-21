@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [./config.nix];
   wayland.windowManager.hyprland = {
     enable = true;
@@ -21,6 +18,6 @@
     loupe
     slurp
     swww
-		grim
+    grim
   ];
 }

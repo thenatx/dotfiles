@@ -6,6 +6,8 @@
     ./networking.nix
   ];
 
+  time.timeZone = "America/Bogota";
+
   services = {
     openssh = {
       enable = true;

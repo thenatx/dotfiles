@@ -10,7 +10,7 @@ const date = Variable("", {
 function ClientTitle() {
 	const getTitle = () => {
 		const LIMIT_TITLE_LENGTH = 15
-		const title = hyprland.active.client.title;
+		const title = hyprland.active.client.class;
 
 		if (title.length > LIMIT_TITLE_LENGTH) {
 			return `${title.slice(0, LIMIT_TITLE_LENGTH)}...`
@@ -37,7 +37,7 @@ function Clock() {
 
 function Media() {
 	const label = Utils.watch("", mpris, "player-changed", () => {
-		if (mpris.players[0]) {
+		if (mpris.players[0].play_back_status == "Playing") {
 			const { track_artists, track_title } = mpris.players[0]
 
 			return `${track_title} - ${track_artists[0]} `
