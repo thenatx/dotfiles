@@ -6,6 +6,7 @@
 
   programs = {
     dconf.enable = true;
+    hyprland.enable = true;
   };
 
   environment.defaultPackages = with pkgs; [home-manager];

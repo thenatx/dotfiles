@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./sound.nix
-    ./opengl.nix
+    ./graphics.nix
     ./bluetooth.nix
   ];
 }

@@ -13,9 +13,9 @@ in {
 
     # Terminal programs
     "${terminal.emulators}/kitty"
-    "${terminal.emulators}/wezterm"
+    # "${terminal.emulators}/wezterm"
 
-    # "${terminal.emulators}/alacritty"
+    "${terminal.emulators}/alacritty"
 
     "${terminal.programs}"
     "${terminal.shell}"
