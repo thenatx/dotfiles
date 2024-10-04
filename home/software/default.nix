@@ -2,7 +2,6 @@
   imports = [
     ./qt.nix
     ./gtk.nix
-    ./sss.nix
     ./xdg.nix
     ./dunst.nix
 

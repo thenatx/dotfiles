@@ -10,13 +10,12 @@ in {
   imports = [
     # General software
     "${home}/software"
+    # "${home}/sss.nix" # Optional screenshot tool
 
     # Terminal programs
     "${terminal.emulators}/kitty"
+    "${terminal.emulators}/foot"
     # "${terminal.emulators}/wezterm"
-
-    "${terminal.emulators}/alacritty"
-
     "${terminal.programs}"
     "${terminal.shell}"
 

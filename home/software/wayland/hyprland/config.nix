@@ -15,8 +15,8 @@ in {
     "$mainMod" = "SUPER";
 
     "$browser" = "brave";
-    "$terminal" = "alacritty";
-    "$fileManager" = "alacritty --command yazi";
+    "$terminal" = "foot";
+    "$fileManager" = "foot yazi";
     "$appLauncher" = "anyrun";
 
     env = [
