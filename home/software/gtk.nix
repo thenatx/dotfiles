@@ -19,8 +19,6 @@
       size = 9;
     };
 
-    gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
-
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.catppuccin-papirus-folders.override {
@@ -30,7 +28,7 @@
     };
 
     theme = {
-      name = "Catppuccin-Mocha-Compact-Lavender-Dark";
+      name = "catppuccin-mocha-lavender-compact+rimless";
       package = pkgs.catppuccin-gtk.override {
         accents = ["lavender"];
         size = "compact";
@@ -39,6 +37,7 @@
       };
     };
 
+    gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
     gtk2.extraConfig = ''
       gtk-application-prefer-dark-theme=1
       gtk-xft-antialias=1

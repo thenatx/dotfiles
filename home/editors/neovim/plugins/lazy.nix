@@ -2,23 +2,23 @@
   enable = true;
   plugins = [
     {
-			lazy = false;
+      lazy = false;
       pkg = pkgs.vimPlugins.noice-nvim;
     }
-		{
-			lazy = false;
-			pkg = pkgs.vimPlugins.nui-nvim;
-		}
-		{
-			lazy = false;
-			pkg = pkgs.vimPlugins.nvim-notify;
-		}
     {
-			lazy = false;
+      lazy = false;
+      pkg = pkgs.vimPlugins.nui-nvim;
+    }
+    {
+      lazy = false;
+      pkg = pkgs.vimPlugins.nvim-notify;
+    }
+    {
+      lazy = false;
       pkg = pkgs.vimPlugins.alpha-nvim;
     }
     {
-			lazy = false;
+      lazy = false;
       pkg = pkgs.vimPlugins.bufferline-nvim;
     }
     {
@@ -55,48 +55,48 @@
     }
     {
       pkg = pkgs.vimPlugins.telescope-nvim;
-			opts = {
-      defaults = {
-        file_ignore_patterns = [
-          "^.git/"
-          "^target/"
-          "^node_modules/"
-        ];
+      opts = {
+        defaults = {
+          file_ignore_patterns = [
+            "^.git/"
+            "^target/"
+            "^node_modules/"
+          ];
 
-        prompt_prefix = "   ";
-        selection_caret = "  ";
-        entry_prefix = "  ";
-        initial_mode = "insert";
-        layout_config = {
-          horizontal = {
-            prompt_position = "top";
-            preview_width = 0.55;
-            results_width = 0.8;
+          prompt_prefix = "   ";
+          selection_caret = "  ";
+          entry_prefix = "  ";
+          initial_mode = "insert";
+          layout_config = {
+            horizontal = {
+              prompt_position = "top";
+              preview_width = 0.55;
+              results_width = 0.8;
+            };
+
+            vertical = {
+              mirror = false;
+            };
+
+            width = 0.87;
+            height = 0.80;
+            preview_cutoff = 120;
           };
 
-          vertical = {
-            mirror = false;
+          border = {};
+          borderchars = ["─" "│" "─" "│" "╭" "╮" "╯" "╰"];
+          set_env = {
+            COLORTERM = "truecolor";
           };
-
-          width = 0.87;
-          height = 0.80;
-          preview_cutoff = 120;
         };
 
-        border = {};
-        borderchars = ["─" "│" "─" "│" "╭" "╮" "╯" "╰"];
-        set_env = {
-          COLORTERM = "truecolor";
+        extensions = {
+          media-files.enable = true;
         };
       };
-
-    extensions = {
-      media-files.enable = true;
-    };
-			};
-			dependencies = [
-				pkgs.vimPlugins.plenary-nvim
-			];
+      dependencies = [
+        pkgs.vimPlugins.plenary-nvim
+      ];
     }
     {
       pkg = import ./codeshot.nix {inherit pkgs;};
