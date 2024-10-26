@@ -4,10 +4,10 @@
     server.enable = true;
     settings = {
       main = {
-        shell = "/run/current-system/sw/bin/zsh";  
+        shell = "/run/current-system/sw/bin/zsh";
         font = "ComicShannsMono Nerd Font:size=14";
       };
-      
+
       cursor = {
         blink = true;
         style = "beam";
