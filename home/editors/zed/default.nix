@@ -9,30 +9,28 @@
     targetPkgs = pkgs:
       with pkgs; [
         zed-editor
+        zlib
       ];
     runScript = "zeditor";
   };
+
   zedNodeFixScript = pkgs.writeShellScriptBin "zedNodeFixScript" ''
     nodeVersion="node-v${pkgs.nodejs.version}-linux-x64"
     zedNodePath="${config.xdg.dataHome}/zed/node/$nodeVersion"
 
-    # Eliminar la versión de node descargada por zed-editor
+    # Delete the version of nodejs downloaded by zed
     rm -rf $zedNodePath
 
-    # Crear el enlace simbólico a la versión de node de nixpkgs
+    # Make a symlink to the version of nixpkgs
     ln -sfn ${pkgs.nodejs} $zedNodePath
   '';
   jsonGenerator = lib.generators.toJSON {};
 in {
   home.packages = with pkgs; [
     zed-fhs
-    nodejs
-    biome
-    vue-language-server
-    vscode-langservers-extracted
     nixd
+    zlib # This lib makes work the discord rich presence extension
     zedNodeFixScript
-    typescript-language-server
   ];
 
   home.file.".config/zed/settings.json".text = jsonGenerator {
@@ -64,7 +62,7 @@ in {
     scrollbar = {
       show = "never";
     };
-    
+
     tab_bar = {
       show = false;
     };
@@ -84,7 +82,7 @@ in {
       dark = "Catppuccin Mocha";
       light = "Catppuccin Latte";
     };
-    
+
     toolbar = {
       breadcrumbs = true;
       quick_actions = false;
@@ -150,6 +148,27 @@ in {
       typescript-language-server = {
         command = "${pkgs.typescript-language-server}/bin/typescript-language-server";
         args = ["--stdio"];
+      };
+      discord_presence = {
+        initialization_options = {
+          base_icons_url = "https://raw.githubusercontent.com/xhyrom/zed-discord-presence/main/assets/icons/";
+
+          state = "Working on {filename}";
+          details = "In {workspace}";
+
+          large_image = "\{base_icons_url}/{language}.png";
+          large_text = "{language:u}";
+
+          small_image = "https://avatars.githubusercontent.com/u/126206823?v=4&size=64"; # This is my github profile photo, change it if you want
+          small_text = "Zed";
+
+          rules = {
+            mode = "blacklist"; # or whitelist
+            paths = [];
+          };
+
+          git_integration = true;
+        };
       };
     };
   };
