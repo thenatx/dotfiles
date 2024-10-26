@@ -156,7 +156,7 @@ in {
           state = "Working on {filename}";
           details = "In {workspace}";
 
-          large_image = "\{base_icons_url}/{language}.png";
+          large_image = "{base_icons_url}/{language}.png";
           large_text = "{language:u}";
 
           small_image = "https://avatars.githubusercontent.com/u/126206823?v=4&size=64"; # This is my github profile photo, change it if you want
