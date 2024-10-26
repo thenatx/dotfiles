@@ -10,20 +10,19 @@ in {
   imports = [
     # General software
     "${home}/software"
-    # "${home}/sss.nix" # Optional screenshot tool
+    # "${home}/sss.nix" # Optional screenshot tool that works with the "screenshot" command
 
     # Terminal programs
-    "${terminal.emulators}/kitty"
     "${terminal.emulators}/foot"
+    # "${terminal.emulatos}/kitty"
     # "${terminal.emulators}/wezterm"
     "${terminal.programs}"
     "${terminal.shell}"
 
     # Code editors
     "${editors}/zed"
-    # "${editors}/neovim"
-
-    # "${editors}/vscode"
     "${editors}/helix"
+    # "${editors}/neovim"
+    # "${editors}/vscode"
   ];
 }
