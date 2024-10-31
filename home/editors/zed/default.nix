@@ -33,6 +33,15 @@ in {
     zedNodeFixScript
   ];
 
+
+  home.file.".config/zed/tasks.json".text = jsonGenerator [
+    {
+      label = "Takes a code screenshot for the selected text";
+      command = "/nix/store/grg11n872lb62qli1vkjvdnav488nb9k-sss_code-v0.1.9/sss_code $ZED_FILE -e $(${./file-extension.nix} $ZED_FILENAME) -o raw | wl-copy";
+      use_new_terminal = true;
+      hide = "never";
+  }];
+
   home.file.".config/zed/settings.json".text = jsonGenerator {
     auto_install_extensions = {
       astro = true;
