@@ -6,7 +6,7 @@ fi
 
 filename="$1"
 if [[ "$filename" == *.* ]]; then
-  extension="\$\{filename##*.}"
+  extension="''${filename##*.}"
   if [[ -n "$extension" && "$extension" != "$filename" ]]; then
     echo "$extension"
   else
