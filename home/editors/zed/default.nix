@@ -37,7 +37,7 @@ in {
   home.file.".config/zed/tasks.json".text = jsonGenerator [
     {
       label = "Takes a code screenshot for the selected text";
-      command = "/nix/store/grg11n872lb62qli1vkjvdnav488nb9k-sss_code-v0.1.9/sss_code $ZED_FILE -e $(${./file-extension.nix} $ZED_FILENAME) -o raw | wl-copy";
+      command = "/nix/store/grg11n872lb62qli1vkjvdnav488nb9k-sss_code-v0.1.9/sss_code $ZED_FILE -e $(${./file-extension.sh} $ZED_FILENAME) -o raw | wl-copy";
       use_new_terminal = true;
       hide = "never";
   }];
