@@ -41,7 +41,7 @@
           top = 15,
           bottom = 15,
         },
-        enable_wayland = true,
+        enable_wayland = false,
         check_for_updates = false,
         default_cursor_style = "SteadyBar",
         automatically_reload_config = true,
