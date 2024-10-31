@@ -1,3 +1,4 @@
+{pkgs, ...}: pkgs.writeShellScriptBin "file_extension" ''
 #! /run/current-system/sw/bin/bash
 if [[ $# -eq 0 ]]; then
   exit 1
@@ -14,3 +15,4 @@ if [[ "$filename" == *.* ]]; then
 else
   echo "txt"
 fi
+''
