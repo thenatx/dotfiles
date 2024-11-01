@@ -28,7 +28,9 @@
     ln -sfn ${pkgs.nodejs} $zedNodePath
   '';
 
-  fileExtensionPackage = pkgs.callPackage ./file-extension.nix { }; 
+  fileExtension = pkgs.callPackage ./file-extension.nix { };
+  screenshotFile = pkgs.callPackage ./screenshot-file.nix { };
+  screenshotSelected = pkgs.callPackage ./screenshot-selected.nix { };
 
   jsonGenerator = lib.generators.toJSON {};
 in {
@@ -37,24 +39,25 @@ in {
     nixd
     zlib # This lib makes work the discord rich presence extension
     zedNodeFixScript
-    fileExtensionPackage
+    fileExtension
+    screenshotFile
+    screenshotSelected
   ];
 
 
   home.file.".config/zed/tasks.json".text = jsonGenerator [
     {
       label = "SSSCompleteFile"; # takes a screenshot of the entire file code
-      command = "/nix/store/grg11n872lb62qli1vkjvdnav488nb9k-sss_code-v0.1.9/sss_code $ZED_FILE -e $(file_extension $ZED_FILENAME) -o raw | wl-copy";
+      command = "screenshot_file";
       use_new_terminal = true;
       hide = "always";
     } 
-    # This will be like the :SSSelected command on codeshot, but isn't working for now
-    # {
-    #   label = "Takes a code screenshot for the selected text (using sss_code)";
-    #   command = "cat <EOF | /nix/store/grg11n872lb62qli1vkjvdnav488nb9k-sss_code-v0.1.9/sss_code -e $(file_extension $ZED_FILENAME) -o raw | wl-copy\n$ZED_SELECTED_TEXT\nEOF";
-    #   use_new_terminal = true;
-    #   hide = "never";
-    # }
+    {
+      label = "SSSelected"; # Takes a screenshot of the selected text
+      command = "screenshot_selected";
+      use_new_terminal = true;
+      hide = "never";
+    }
   ];
 
   home.file.".config/zed/settings.json".text = jsonGenerator {
