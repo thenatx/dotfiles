@@ -43,11 +43,19 @@ in {
 
   home.file.".config/zed/tasks.json".text = jsonGenerator [
     {
-      label = "Takes a code screenshot for the selected text";
+      label = "SSSCompleteFile"; # takes a screenshot of the entire file code
       command = "/nix/store/grg11n872lb62qli1vkjvdnav488nb9k-sss_code-v0.1.9/sss_code $ZED_FILE -e $(file_extension $ZED_FILENAME) -o raw | wl-copy";
       use_new_terminal = true;
-      hide = "never";
-  }];
+      hide = "always";
+    } 
+    # This will be like the :SSSelected command on codeshot, but isn't working for now
+    # {
+    #   label = "Takes a code screenshot for the selected text (using sss_code)";
+    #   command = "cat <EOF | /nix/store/grg11n872lb62qli1vkjvdnav488nb9k-sss_code-v0.1.9/sss_code -e $(file_extension $ZED_FILENAME) -o raw | wl-copy\n$ZED_SELECTED_TEXT\nEOF";
+    #   use_new_terminal = true;
+    #   hide = "never";
+    # }
+  ];
 
   home.file.".config/zed/settings.json".text = jsonGenerator {
     auto_install_extensions = {
