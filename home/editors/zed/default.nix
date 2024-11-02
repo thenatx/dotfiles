@@ -105,7 +105,9 @@ in {
     };
 
     theme = {
-      mode = "system";
+      # The system option seems to not work for some reason, i searched and didn't find a reason for why
+      # i'll set dark theme for now
+      mode = "dark"; 
       dark = "Catppuccin Mocha";
       light = "Catppuccin Latte";
     };
