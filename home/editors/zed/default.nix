@@ -48,13 +48,13 @@ in {
   home.file.".config/zed/tasks.json".text = jsonGenerator [
     {
       label = "SSSCompleteFile"; # takes a screenshot of the entire file code
-      command = "screenshot_file";
+      command = "screenshot_file 'Catppuccin Mocha'";
       use_new_terminal = true;
       hide = "always";
     } 
     {
       label = "SSSelected"; # Takes a screenshot of the selected text
-      command = "screenshot_selected";
+      command = "screenshot_selected 'Catppuccin Mocha'";
       use_new_terminal = true;
       hide = "never";
     }
