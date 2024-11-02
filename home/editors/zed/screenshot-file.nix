@@ -7,5 +7,5 @@ if [ -z "$theme" ]; then
 fi
 
 extension=$(file_extension $ZED_FILENAME)
-~/Downloads/sss_code $ZED_FILE -e $extension -t $theme -o raw | wl-copy
+~/Downloads/sss_code $ZED_FILE -e $extension -t "$theme" -o raw | wl-copy
 ''

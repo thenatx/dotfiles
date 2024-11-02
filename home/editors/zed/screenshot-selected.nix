@@ -9,5 +9,5 @@ if [ -z "$theme" ]; then
   exit 0
 fi
 
-~/Downloads/sss_code $temp_file -e $extension -t $theme -o raw | wl-copy
+~/Downloads/sss_code $temp_file -e $extension -t "$theme" -o raw | wl-copy
 ''
