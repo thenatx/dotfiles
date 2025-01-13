@@ -3,6 +3,7 @@
     ./qt.nix
     ./gtk.nix
     ./xdg.nix
+    ./sss.nix
     ./dunst.nix
 
     ./ags

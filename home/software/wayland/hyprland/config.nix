@@ -61,8 +61,7 @@ in {
       inactive_opacity = 0.80;
       fullscreen_opacity = 1.0;
 
-      drop_shadow = false;
-
+      shadow.enabled = false;
       blur = {
         enabled = true;
         size = 7;
@@ -71,6 +70,7 @@ in {
         ignore_opacity = true;
       };
     };
+
 
     input = {
       kb_layout = "us";

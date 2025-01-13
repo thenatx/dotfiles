@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  zed-fhs = pkgs.buildFHSUserEnv {
+  zed-fhs = pkgs.buildFHSEnv {
     name = "zed";
     targetPkgs = pkgs:
       with pkgs; [
@@ -56,7 +56,7 @@ in {
       label = "SSSelected"; # Takes a screenshot of the selected text
       command = "screenshot_selected 'Catppuccin Mocha'";
       use_new_terminal = true;
-      hide = "never";
+      hide = "always";
     }
   ];
 
@@ -122,10 +122,6 @@ in {
     lsp = {
       rust-analyzer = {
         initialization_options = {
-          rust = {
-            analyzerTargetDir = false;
-          };
-
           binary = {
             path = "${pkgs.rust-analyzer}/bin/rust-analyzer";
             args = [];

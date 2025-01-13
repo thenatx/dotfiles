@@ -12,21 +12,16 @@
     packages = with pkgs; [
       lexend
       noto-fonts
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       noto-fonts-emoji
 
       comic-mono
-      (nerdfonts.override {
-        fonts = [
-          "NerdFontsSymbolsOnly"
-          "CascadiaCode"
-          "ComicShannsMono"
-          "FiraCode"
-          "GeistMono"
-          "Hack"
-          "JetBrainsMono"
-        ];
-      })
+      nerd-fonts.symbols-only
+      nerd-fonts.comic-shanns-mono
+      nerd-fonts.fira-code
+      nerd-fonts.geist-mono
+      nerd-fonts.hack
+      nerd-fonts.jetbrains-mono
     ];
   };
 }

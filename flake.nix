@@ -27,7 +27,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     wallpapers = {
-      url = "github:NatProgramer/wallpapers";
+      url = "github:thenatx/wallpapers";
       flake = false;
     };
 
@@ -41,8 +41,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    anyrun.url = "github:Kirottu/anyrun/c6101a31a80b51e32e96f6a77616b609770172e0";
-    sss.url = "github:SergioRibera/sss/245914a6f19e421a9d81814ac9d275ba0f83cc41";
+    anyrun.url = "github:Kirottu/anyrun";
+    sss.url = "github:SergioRibera/sss";
     ags.url = "github:Aylur/ags";
 
     flake-parts = {
